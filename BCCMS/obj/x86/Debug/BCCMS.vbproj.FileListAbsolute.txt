@@ -1,0 +1,42 @@
+C:\Users\Admin\AppData\Local\Temporary Projects\BCCMS\bin\Debug\BCCMS.exe
+C:\Users\Admin\AppData\Local\Temporary Projects\BCCMS\bin\Debug\BCCMS.pdb
+C:\Users\Admin\AppData\Local\Temporary Projects\BCCMS\bin\Debug\BCCMS.xml
+C:\Users\Admin\AppData\Local\Temporary Projects\BCCMS\obj\x86\Debug\BCCMS.frmLogin.resources
+C:\Users\Admin\AppData\Local\Temporary Projects\BCCMS\obj\x86\Debug\BCCMS.Resources.resources
+C:\Users\Admin\AppData\Local\Temporary Projects\BCCMS\obj\x86\Debug\BCCMS.vbproj.GenerateResource.Cache
+C:\Users\Admin\AppData\Local\Temporary Projects\BCCMS\obj\x86\Debug\BCCMS.exe
+C:\Users\Admin\AppData\Local\Temporary Projects\BCCMS\obj\x86\Debug\BCCMS.xml
+C:\Users\Admin\AppData\Local\Temporary Projects\BCCMS\obj\x86\Debug\BCCMS.pdb
+C:\Users\Admin\documents\visual studio 2010\Projects\BCCMS\BCCMS\obj\x86\Debug\BCCMS.exe
+C:\Users\Admin\documents\visual studio 2010\Projects\BCCMS\BCCMS\obj\x86\Debug\BCCMS.xml
+C:\Users\Admin\documents\visual studio 2010\Projects\BCCMS\BCCMS\obj\x86\Debug\BCCMS.pdb
+C:\Users\Admin\documents\visual studio 2010\Projects\BCCMS\BCCMS\bin\Debug\BCCMS.exe
+C:\Users\Admin\documents\visual studio 2010\Projects\BCCMS\BCCMS\bin\Debug\BCCMS.pdb
+C:\Users\Admin\documents\visual studio 2010\Projects\BCCMS\BCCMS\bin\Debug\BCCMS.xml
+C:\Users\Admin\documents\visual studio 2010\Projects\BCCMS\BCCMS\obj\x86\Debug\BCCMS.frmLogin.resources
+C:\Users\Admin\documents\visual studio 2010\Projects\BCCMS\BCCMS\obj\x86\Debug\BCCMS.Resources.resources
+C:\Users\Admin\documents\visual studio 2010\Projects\BCCMS\BCCMS\obj\x86\Debug\BCCMS.vbproj.GenerateResource.Cache
+C:\Users\Admin\documents\visual studio 2010\Projects\BCCMS\BCCMS\bin\Debug\Mimobibo.dll
+C:\Users\Admin\documents\visual studio 2010\Projects\BCCMS\BCCMS\bin\Debug\Mimobibo.pdb
+C:\Users\Admin\documents\visual studio 2010\Projects\BCCMS\BCCMS\obj\x86\Debug\BCCMS.frmMain.resources
+C:\Users\Admin\documents\visual studio 2010\Projects\BCCMS\BCCMS\obj\x86\Debug\BCCMS.Dashboard.resources
+C:\Users\Admin\documents\visual studio 2010\Projects\BCCMS\BCCMS\obj\x86\Debug\BCCMS.Patients.resources
+C:\Users\Admin\documents\visual studio 2010\Projects\BCCMS\BCCMS\obj\x86\Debug\BCCMS.frmPatientRegister.resources
+C:\Users\Admin\Documents\Visual Studio 2010\Projects\BCCMS\BCCMS\obj\x86\Debug\BCCMS.vbproj.AssemblyReference.cache
+C:\Users\Admin\Documents\Visual Studio 2010\Projects\BCCMS\BCCMS\obj\x86\Debug\BCCMS.vbproj.CoreCompileInputs.cache
+C:\Users\Admin\Documents\Visual Studio 2010\Projects\BCCMS\BCCMS\obj\x86\Debug\BCCMS.vbproj.CopyComplete
+C:\Users\pabot\Desktop\BCCMS-main\BCCMS-main\BCCMS\bin\Debug\BCCMS.exe
+C:\Users\pabot\Desktop\BCCMS-main\BCCMS-main\BCCMS\bin\Debug\BCCMS.pdb
+C:\Users\pabot\Desktop\BCCMS-main\BCCMS-main\BCCMS\bin\Debug\BCCMS.xml
+C:\Users\pabot\Desktop\BCCMS-main\BCCMS-main\BCCMS\obj\x86\Debug\BCCMS.Dashboard.resources
+C:\Users\pabot\Desktop\BCCMS-main\BCCMS-main\BCCMS\obj\x86\Debug\BCCMS.frmLogin.resources
+C:\Users\pabot\Desktop\BCCMS-main\BCCMS-main\BCCMS\obj\x86\Debug\BCCMS.frmMain.resources
+C:\Users\pabot\Desktop\BCCMS-main\BCCMS-main\BCCMS\obj\x86\Debug\BCCMS.Resources.resources
+C:\Users\pabot\Desktop\BCCMS-main\BCCMS-main\BCCMS\obj\x86\Debug\BCCMS.frmPatientRegister.resources
+C:\Users\pabot\Desktop\BCCMS-main\BCCMS-main\BCCMS\obj\x86\Debug\BCCMS.Patients.resources
+C:\Users\pabot\Desktop\BCCMS-main\BCCMS-main\BCCMS\obj\x86\Debug\BCCMS.vbproj.GenerateResource.cache
+C:\Users\pabot\Desktop\BCCMS-main\BCCMS-main\BCCMS\obj\x86\Debug\BCCMS.vbproj.CoreCompileInputs.cache
+C:\Users\pabot\Desktop\BCCMS-main\BCCMS-main\BCCMS\obj\x86\Debug\BCCMS.vbproj.CopyComplete
+C:\Users\pabot\Desktop\BCCMS-main\BCCMS-main\BCCMS\obj\x86\Debug\BCCMS.exe
+C:\Users\pabot\Desktop\BCCMS-main\BCCMS-main\BCCMS\obj\x86\Debug\BCCMS.xml
+C:\Users\pabot\Desktop\BCCMS-main\BCCMS-main\BCCMS\obj\x86\Debug\BCCMS.pdb

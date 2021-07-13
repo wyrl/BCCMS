@@ -1,0 +1,281 @@
+﻿<?xml version="1.0"?>
+<doc>
+<assembly>
+<name>
+CMS
+</name>
+</assembly>
+<members>
+<member name="T:CMS.My.Resources.Resources">
+<summary>
+  A strongly-typed resource class, for looking up localized strings, etc.
+</summary>
+</member>
+<member name="P:CMS.My.Resources.Resources.ResourceManager">
+<summary>
+  Returns the cached ResourceManager instance used by this class.
+</summary>
+</member>
+<member name="P:CMS.My.Resources.Resources.Culture">
+<summary>
+  Overrides the current thread's CurrentUICulture property for all
+  resource lookups using this strongly typed resource class.
+</summary>
+</member>
+<member name="P:CMS.My.Resources.Resources._184_1847591_white_house_clipart_legislative_leader_city_hall_icon">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:CMS.My.Resources.Resources._3159942">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:CMS.My.Resources.Resources.HubPages_1x1_CommunicableDiseases_a9cuob">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:CMS.My.Resources.Resources.outline_coronavirus_black_48dp">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:CMS.My.Resources.Resources.outline_person_search_black_48dp">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:CMS.My.Resources.Resources.outline_search_black_48dp">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="T:CMS.cmsDataSet">
+<summary>
+Represents a strongly typed in-memory cache of data.
+</summary>
+</member>
+<member name="T:CMS.cmsDataSet.DeathDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:CMS.cmsDataSet.LoginDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:CMS.cmsDataSet.PersonDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:CMS.cmsDataSet.PUI_detailsDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:CMS.cmsDataSet.PUM_detailsDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:CMS.cmsDataSet.QuarantineDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:CMS.cmsDataSet.RecoveredDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:CMS.cmsDataSet.PositiveDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:CMS.cmsDataSet.NegativeDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:CMS.cmsDataSet.DeathRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:CMS.cmsDataSet.LoginRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:CMS.cmsDataSet.PersonRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:CMS.cmsDataSet.PUI_detailsRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:CMS.cmsDataSet.PUM_detailsRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:CMS.cmsDataSet.QuarantineRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:CMS.cmsDataSet.RecoveredRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:CMS.cmsDataSet.PositiveRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:CMS.cmsDataSet.NegativeRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:CMS.cmsDataSet.DeathRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:CMS.cmsDataSet.LoginRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:CMS.cmsDataSet.PersonRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:CMS.cmsDataSet.PUI_detailsRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:CMS.cmsDataSet.PUM_detailsRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:CMS.cmsDataSet.QuarantineRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:CMS.cmsDataSet.RecoveredRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:CMS.cmsDataSet.PositiveRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:CMS.cmsDataSet.NegativeRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:CMS.cmsDataSetTableAdapters.DeathTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:CMS.cmsDataSetTableAdapters.LoginTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:CMS.cmsDataSetTableAdapters.PersonTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:CMS.cmsDataSetTableAdapters.PUI_detailsTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:CMS.cmsDataSetTableAdapters.PUM_detailsTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:CMS.cmsDataSetTableAdapters.QuarantineTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:CMS.cmsDataSetTableAdapters.RecoveredTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:CMS.cmsDataSetTableAdapters.PositiveTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:CMS.cmsDataSetTableAdapters.NegativeTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:CMS.cmsDataSetTableAdapters.TableAdapterManager">
+<summary>
+TableAdapterManager is used to coordinate TableAdapters in the dataset to enable Hierarchical Update scenarios
+</summary>
+</member>
+<member name="M:CMS.cmsDataSetTableAdapters.TableAdapterManager.UpdateUpdatedRows(CMS.cmsDataSet,System.Collections.Generic.List{System.Data.DataRow},System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Update rows in top-down order.
+</summary>
+</member>
+<member name="M:CMS.cmsDataSetTableAdapters.TableAdapterManager.UpdateInsertedRows(CMS.cmsDataSet,System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Insert rows in top-down order.
+</summary>
+</member>
+<member name="M:CMS.cmsDataSetTableAdapters.TableAdapterManager.UpdateDeletedRows(CMS.cmsDataSet,System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Delete rows in bottom-up order.
+</summary>
+</member>
+<member name="M:CMS.cmsDataSetTableAdapters.TableAdapterManager.GetRealUpdatedRows(System.Data.DataRow[],System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Remove inserted rows that become updated rows after calling TableAdapter.Update(inserted rows) first
+</summary>
+</member>
+<member name="M:CMS.cmsDataSetTableAdapters.TableAdapterManager.UpdateAll(CMS.cmsDataSet)">
+<summary>
+Update all changes to the dataset.
+</summary>
+</member>
+<member name="T:CMS.cmsDataSetTableAdapters.TableAdapterManager.UpdateOrderOption">
+<summary>
+Update Order Option
+</summary>
+</member>
+<member name="T:CMS.cmsDataSetTableAdapters.TableAdapterManager.SelfReferenceComparer">
+<summary>
+Used to sort self-referenced table's rows
+</summary>
+</member>
+</members>
+</doc>
