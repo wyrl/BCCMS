@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class frmPUI
     Inherits System.Windows.Forms.UserControl
 
     'UserControl overrides dispose to clean up the component list.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,37 +20,40 @@ Partial Class frmPUI
     'NOTE: The following procedure is required by the Windows Form Designer
     'It can be modified using the Windows Form Designer.  
     'Do not modify it using the code editor.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
+        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.Panel2 = New System.Windows.Forms.Panel()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
-        Me.PictureBox2 = New System.Windows.Forms.PictureBox()
+        Me.txtSearch = New System.Windows.Forms.TextBox()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.Label1 = New System.Windows.Forms.Label()
+        Me.PictureBox2 = New System.Windows.Forms.PictureBox()
         Me.dgvPUI = New System.Windows.Forms.DataGridView()
-        Me.PUIdetailsBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.CmsDataSet = New CMS.cmsDataSet()
-        Me.PUI_detailsTableAdapter = New CMS.cmsDataSetTableAdapters.PUI_detailsTableAdapter()
-        Me.DateDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.FullnameDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.AddressDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.PhoneDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.IllnessesDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.TemperatureDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.RemarksDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.StatusDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.PatientBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.PatientTableAdapter = New CMS.cmsDataSetTableAdapters.PatientTableAdapter()
+        Me.DataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.fullname = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.gender = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.AgeDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.address = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.phone = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.illnesses = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.temperature = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.remarks = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.status = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Panel2.SuspendLayout()
-        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel1.SuspendLayout()
+        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.dgvPUI, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PUIdetailsBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.CmsDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PatientBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Panel2
         '
-        Me.Panel2.Controls.Add(Me.TextBox1)
+        Me.Panel2.Controls.Add(Me.txtSearch)
         Me.Panel2.Controls.Add(Me.PictureBox2)
         Me.Panel2.Dock = System.Windows.Forms.DockStyle.Top
         Me.Panel2.Location = New System.Drawing.Point(0, 64)
@@ -58,25 +61,14 @@ Partial Class frmPUI
         Me.Panel2.Size = New System.Drawing.Size(762, 68)
         Me.Panel2.TabIndex = 12
         '
-        'TextBox1
+        'txtSearch
         '
-        Me.TextBox1.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.TextBox1.Font = New System.Drawing.Font("Segoe UI", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox1.Location = New System.Drawing.Point(507, 15)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(242, 39)
-        Me.TextBox1.TabIndex = 8
-        '
-        'PictureBox2
-        '
-        Me.PictureBox2.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.PictureBox2.Image = Global.CMS.My.Resources.Resources.outline_search_black_48dp
-        Me.PictureBox2.Location = New System.Drawing.Point(463, 15)
-        Me.PictureBox2.Name = "PictureBox2"
-        Me.PictureBox2.Size = New System.Drawing.Size(38, 39)
-        Me.PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.PictureBox2.TabIndex = 9
-        Me.PictureBox2.TabStop = False
+        Me.txtSearch.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.txtSearch.Font = New System.Drawing.Font("Segoe UI", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtSearch.Location = New System.Drawing.Point(507, 15)
+        Me.txtSearch.Name = "txtSearch"
+        Me.txtSearch.Size = New System.Drawing.Size(242, 39)
+        Me.txtSearch.TabIndex = 8
         '
         'Panel1
         '
@@ -100,81 +92,108 @@ Partial Class frmPUI
         Me.Label1.Text = "Person Under Investigation (PUI)"
         Me.Label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
+        'PictureBox2
+        '
+        Me.PictureBox2.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.PictureBox2.Image = Global.CMS.My.Resources.Resources.outline_search_black_48dp
+        Me.PictureBox2.Location = New System.Drawing.Point(463, 15)
+        Me.PictureBox2.Name = "PictureBox2"
+        Me.PictureBox2.Size = New System.Drawing.Size(38, 39)
+        Me.PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.PictureBox2.TabIndex = 9
+        Me.PictureBox2.TabStop = False
+        '
         'dgvPUI
         '
+        DataGridViewCellStyle1.Font = New System.Drawing.Font("Segoe UI", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.dgvPUI.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle1
         Me.dgvPUI.AutoGenerateColumns = False
         Me.dgvPUI.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.dgvPUI.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DateDataGridViewTextBoxColumn, Me.FullnameDataGridViewTextBoxColumn, Me.AddressDataGridViewTextBoxColumn, Me.PhoneDataGridViewTextBoxColumn, Me.IllnessesDataGridViewTextBoxColumn, Me.TemperatureDataGridViewTextBoxColumn, Me.RemarksDataGridViewTextBoxColumn, Me.StatusDataGridViewTextBoxColumn})
-        Me.dgvPUI.DataSource = Me.PUIdetailsBindingSource
+        Me.dgvPUI.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn1, Me.fullname, Me.gender, Me.AgeDataGridViewTextBoxColumn, Me.address, Me.phone, Me.illnesses, Me.temperature, Me.remarks, Me.status})
+        Me.dgvPUI.DataSource = Me.PatientBindingSource
         Me.dgvPUI.Dock = System.Windows.Forms.DockStyle.Fill
         Me.dgvPUI.Location = New System.Drawing.Point(0, 132)
         Me.dgvPUI.Name = "dgvPUI"
         Me.dgvPUI.Size = New System.Drawing.Size(762, 389)
         Me.dgvPUI.TabIndex = 13
         '
-        'PUIdetailsBindingSource
-        '
-        Me.PUIdetailsBindingSource.DataMember = "PUI_details"
-        Me.PUIdetailsBindingSource.DataSource = Me.CmsDataSet
-        '
         'CmsDataSet
         '
         Me.CmsDataSet.DataSetName = "cmsDataSet"
         Me.CmsDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
         '
-        'PUI_detailsTableAdapter
+        'PatientBindingSource
         '
-        Me.PUI_detailsTableAdapter.ClearBeforeFill = True
+        Me.PatientBindingSource.DataMember = "Patient"
+        Me.PatientBindingSource.DataSource = Me.CmsDataSet
         '
-        'DateDataGridViewTextBoxColumn
+        'PatientTableAdapter
         '
-        Me.DateDataGridViewTextBoxColumn.DataPropertyName = "_date"
-        Me.DateDataGridViewTextBoxColumn.HeaderText = "Date"
-        Me.DateDataGridViewTextBoxColumn.Name = "DateDataGridViewTextBoxColumn"
+        Me.PatientTableAdapter.ClearBeforeFill = True
         '
-        'FullnameDataGridViewTextBoxColumn
+        'DataGridViewTextBoxColumn1
         '
-        Me.FullnameDataGridViewTextBoxColumn.DataPropertyName = "fullname"
-        Me.FullnameDataGridViewTextBoxColumn.HeaderText = "Fullname"
-        Me.FullnameDataGridViewTextBoxColumn.Name = "FullnameDataGridViewTextBoxColumn"
-        Me.FullnameDataGridViewTextBoxColumn.ReadOnly = True
+        Me.DataGridViewTextBoxColumn1.DataPropertyName = "_date"
+        Me.DataGridViewTextBoxColumn1.HeaderText = "Date"
+        Me.DataGridViewTextBoxColumn1.Name = "DataGridViewTextBoxColumn1"
         '
-        'AddressDataGridViewTextBoxColumn
+        'fullname
         '
-        Me.AddressDataGridViewTextBoxColumn.DataPropertyName = "address"
-        Me.AddressDataGridViewTextBoxColumn.HeaderText = "Address"
-        Me.AddressDataGridViewTextBoxColumn.Name = "AddressDataGridViewTextBoxColumn"
-        Me.AddressDataGridViewTextBoxColumn.ReadOnly = True
+        Me.fullname.DataPropertyName = "fullname"
+        Me.fullname.HeaderText = "Fullname"
+        Me.fullname.Name = "fullname"
+        Me.fullname.ReadOnly = True
+        Me.fullname.Width = 200
         '
-        'PhoneDataGridViewTextBoxColumn
+        'gender
         '
-        Me.PhoneDataGridViewTextBoxColumn.DataPropertyName = "phone"
-        Me.PhoneDataGridViewTextBoxColumn.HeaderText = "Phone"
-        Me.PhoneDataGridViewTextBoxColumn.Name = "PhoneDataGridViewTextBoxColumn"
+        Me.gender.DataPropertyName = "gender"
+        Me.gender.HeaderText = "Gender"
+        Me.gender.Name = "gender"
         '
-        'IllnessesDataGridViewTextBoxColumn
+        'AgeDataGridViewTextBoxColumn
         '
-        Me.IllnessesDataGridViewTextBoxColumn.DataPropertyName = "illnesses"
-        Me.IllnessesDataGridViewTextBoxColumn.HeaderText = "Illnesses"
-        Me.IllnessesDataGridViewTextBoxColumn.Name = "IllnessesDataGridViewTextBoxColumn"
+        Me.AgeDataGridViewTextBoxColumn.DataPropertyName = "age"
+        Me.AgeDataGridViewTextBoxColumn.HeaderText = "Age"
+        Me.AgeDataGridViewTextBoxColumn.Name = "AgeDataGridViewTextBoxColumn"
         '
-        'TemperatureDataGridViewTextBoxColumn
+        'address
         '
-        Me.TemperatureDataGridViewTextBoxColumn.DataPropertyName = "temperature"
-        Me.TemperatureDataGridViewTextBoxColumn.HeaderText = "Temperature"
-        Me.TemperatureDataGridViewTextBoxColumn.Name = "TemperatureDataGridViewTextBoxColumn"
+        Me.address.DataPropertyName = "address"
+        Me.address.HeaderText = "Address"
+        Me.address.Name = "address"
+        Me.address.ReadOnly = True
+        Me.address.Width = 200
         '
-        'RemarksDataGridViewTextBoxColumn
+        'phone
         '
-        Me.RemarksDataGridViewTextBoxColumn.DataPropertyName = "remarks"
-        Me.RemarksDataGridViewTextBoxColumn.HeaderText = "Remarks"
-        Me.RemarksDataGridViewTextBoxColumn.Name = "RemarksDataGridViewTextBoxColumn"
+        Me.phone.DataPropertyName = "phone"
+        Me.phone.HeaderText = "Phone"
+        Me.phone.Name = "phone"
         '
-        'StatusDataGridViewTextBoxColumn
+        'illnesses
         '
-        Me.StatusDataGridViewTextBoxColumn.DataPropertyName = "status"
-        Me.StatusDataGridViewTextBoxColumn.HeaderText = "Status"
-        Me.StatusDataGridViewTextBoxColumn.Name = "StatusDataGridViewTextBoxColumn"
+        Me.illnesses.DataPropertyName = "illnesses"
+        Me.illnesses.HeaderText = "Illnesses"
+        Me.illnesses.Name = "illnesses"
+        '
+        'temperature
+        '
+        Me.temperature.DataPropertyName = "temp"
+        Me.temperature.HeaderText = "Temperature"
+        Me.temperature.Name = "temperature"
+        '
+        'remarks
+        '
+        Me.remarks.DataPropertyName = "remarks"
+        Me.remarks.HeaderText = "Remarks"
+        Me.remarks.Name = "remarks"
+        '
+        'status
+        '
+        Me.status.DataPropertyName = "status"
+        Me.status.HeaderText = "Status"
+        Me.status.Name = "status"
         '
         'frmPUI
         '
@@ -186,11 +205,11 @@ Partial Class frmPUI
         Me.Size = New System.Drawing.Size(762, 521)
         Me.Panel2.ResumeLayout(False)
         Me.Panel2.PerformLayout()
-        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel1.ResumeLayout(False)
+        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.dgvPUI, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PUIdetailsBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.CmsDataSet, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PatientBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -199,17 +218,19 @@ Partial Class frmPUI
     Friend WithEvents Panel1 As Panel
     Friend WithEvents Label1 As Label
     Friend WithEvents PictureBox2 As PictureBox
-    Friend WithEvents TextBox1 As TextBox
+    Friend WithEvents txtSearch As TextBox
     Friend WithEvents dgvPUI As DataGridView
-    Friend WithEvents PUIdetailsBindingSource As BindingSource
+    Friend WithEvents DataGridViewTextBoxColumn1 As DataGridViewTextBoxColumn
+    Friend WithEvents fullname As DataGridViewTextBoxColumn
+    Friend WithEvents gender As DataGridViewTextBoxColumn
+    Friend WithEvents AgeDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents address As DataGridViewTextBoxColumn
+    Friend WithEvents phone As DataGridViewTextBoxColumn
+    Friend WithEvents illnesses As DataGridViewTextBoxColumn
+    Friend WithEvents temperature As DataGridViewTextBoxColumn
+    Friend WithEvents remarks As DataGridViewTextBoxColumn
+    Friend WithEvents status As DataGridViewTextBoxColumn
+    Friend WithEvents PatientBindingSource As BindingSource
     Friend WithEvents CmsDataSet As cmsDataSet
-    Friend WithEvents PUI_detailsTableAdapter As cmsDataSetTableAdapters.PUI_detailsTableAdapter
-    Friend WithEvents DateDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
-    Friend WithEvents FullnameDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
-    Friend WithEvents AddressDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
-    Friend WithEvents PhoneDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
-    Friend WithEvents IllnessesDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
-    Friend WithEvents TemperatureDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
-    Friend WithEvents RemarksDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
-    Friend WithEvents StatusDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents PatientTableAdapter As cmsDataSetTableAdapters.PatientTableAdapter
 End Class

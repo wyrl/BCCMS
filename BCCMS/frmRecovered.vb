@@ -1,8 +1,9 @@
 ﻿Public Class frmRecovered
     Public Sub RefreshData()
-        Dim details As New PersonDetails(PersonDetails.DETAILS_RECOVERED)
+        Patient.Search2(CmsDataSet.Patient, txtSearch.Text, "", "", "Recovered")
+    End Sub
 
-        CmsDataSet.Recovered.Clear()
-        details.List(CmsDataSet.Recovered)
+    Private Sub txtSearch_TextChanged(sender As Object, e As EventArgs) Handles txtSearch.TextChanged
+        RefreshData()
     End Sub
 End Class

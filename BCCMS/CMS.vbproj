@@ -95,7 +95,9 @@
     <Reference Include="Microsoft.SqlServer.Types, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.SqlServer.Types.14.0.1016.290\lib\net40\Microsoft.SqlServer.Types.dll</HintPath>
     </Reference>
-    <Reference Include="System" />
+    <Reference Include="System">
+      <HintPath>..\..\..\..\..\..\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.7.2\System.dll</HintPath>
+    </Reference>
     <Reference Include="System.Data" />
     <Reference Include="System.Deployment" />
     <Reference Include="System.Drawing" />
@@ -122,8 +124,13 @@
   <ItemGroup>
     <Compile Include="Classes\Carrier.vb" />
     <Compile Include="Classes\Database.vb" />
+    <Compile Include="Classes\Household.vb" />
     <Compile Include="Classes\IControlData.vb" />
+    <Compile Include="Classes\IsolationFacility.vb" />
     <Compile Include="Classes\Login.vb" />
+    <Compile Include="Classes\MonthlyCases.vb" />
+    <Compile Include="Classes\Nurse.vb" />
+    <Compile Include="Classes\PatientStatus.vb" />
     <Compile Include="Classes\PersonDetails.vb" />
     <Compile Include="Classes\Quarantine.vb" />
     <Compile Include="Classes\Styles.vb" />
@@ -140,6 +147,12 @@
     </Compile>
     <Compile Include="Form1.vb">
       <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPositiveCases.Designer.vb">
+      <DependentUpon>frmPositiveCases.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmPositiveCases.vb">
+      <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="frmPUI.Designer.vb">
       <DependentUpon>frmPUI.vb</DependentUpon>
@@ -190,6 +203,12 @@
     <Compile Include="frmRecovered.vb">
       <SubType>UserControl</SubType>
     </Compile>
+    <Compile Include="HouseholdRegister.Designer.vb">
+      <DependentUpon>HouseholdRegister.vb</DependentUpon>
+    </Compile>
+    <Compile Include="HouseholdRegister.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>
@@ -206,19 +225,19 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <Compile Include="frmPersonRegister.Designer.vb">
-      <DependentUpon>frmPersonRegister.vb</DependentUpon>
+    <Compile Include="frmPatientRegister.Designer.vb">
+      <DependentUpon>frmPatientRegister.vb</DependentUpon>
     </Compile>
-    <Compile Include="frmPersonRegister.vb">
+    <Compile Include="frmPatientRegister.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="PersonManagement.Designer.vb">
-      <DependentUpon>PersonManagement.vb</DependentUpon>
+    <Compile Include="PatientManagement.Designer.vb">
+      <DependentUpon>PatientManagement.vb</DependentUpon>
     </Compile>
-    <Compile Include="PersonManagement.vb">
+    <Compile Include="PatientManagement.vb">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Classes\Person.vb" />
+    <Compile Include="Classes\Patient.vb" />
     <Compile Include="Reports.Designer.vb">
       <DependentUpon>Reports.vb</DependentUpon>
     </Compile>
@@ -237,6 +256,9 @@
     <EmbeddedResource Include="Covid19Report.rdlc" />
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPositiveCases.resx">
+      <DependentUpon>frmPositiveCases.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmPUI.resx">
       <DependentUpon>frmPUI.vb</DependentUpon>
@@ -262,17 +284,20 @@
     <EmbeddedResource Include="frmRecovered.resx">
       <DependentUpon>frmRecovered.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="HouseholdRegister.resx">
+      <DependentUpon>HouseholdRegister.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.vb</LastGenOutput>
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <SubType>Designer</SubType>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmPersonRegister.resx">
-      <DependentUpon>frmPersonRegister.vb</DependentUpon>
+    <EmbeddedResource Include="frmPatientRegister.resx">
+      <DependentUpon>frmPatientRegister.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="PersonManagement.resx">
-      <DependentUpon>PersonManagement.vb</DependentUpon>
+    <EmbeddedResource Include="PatientManagement.resx">
+      <DependentUpon>PatientManagement.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Reports.resx">
       <DependentUpon>Reports.vb</DependentUpon>
@@ -349,6 +374,8 @@
     <Content Include="cms.mdb">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <None Include="Resources\recovered_icon.png" />
+    <None Include="Resources\death.png" />
     <Content Include="SqlServerTypes\Loader.cs" />
     <Content Include="SqlServerTypes\readme.htm" />
     <Content Include="SqlServerTypes\x64\msvcr120.dll">

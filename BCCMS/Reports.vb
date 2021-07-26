@@ -10,44 +10,41 @@ Public Class Reports
     End Sub
 
     Public Sub RefreshData()
-
+        ReportViewer1.LocalReport.DataSources.Clear()
+        ReportViewer1.LocalReport.DataSources.Add(New ReportDataSource("DataSet1", BindingSource1))
     End Sub
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
-        If cbReport.Text = "COVID19 Positive" Then
-            Dim positive As New PersonDetails(PersonDetails.DETAILS_POSITIVE)
+        Dim param1 As New List(Of ReportParameter)
+        Dim title As String = ""
+        Dim year As String = cbFrom.Text
+        CmsDataSet1.Patient.Clear()
 
-            positive.ListByYear(cmsDataSet.Positive, cbFrom.Text)
+        If cbReport.Text = "Confirmed Cases" Then
+            title = "Covid-19 Confirmed Cases in " & year
 
-
-            Dim param1 As New List(Of ReportParameter)
-            param1.Add(New ReportParameter("title", "Covid-19 Confirmed Cases in " & cbFrom.Text, True))
-            ReportViewer1.LocalReport.SetParameters(param1)
-            ReportViewer1.RefreshReport()
-
+            Patient.PositiveListByYear(CmsDataSet1.Patient, year)
         ElseIf cbReport.Text = "PUI" Then
-            Dim detail As New PersonDetails(PersonDetails.DETAILS_PUI)
+            title = "Covid-19 PUI Cases in " & year
 
-            detail.ListByYear(cmsDataSet.Positive, cbFrom.Text)
-
-
-            Dim param1 As New List(Of ReportParameter)
-            param1.Add(New ReportParameter("title", "Covid-19 Cases as PUI in " & cbFrom.Text, True))
-            ReportViewer1.LocalReport.SetParameters(param1)
-            ReportViewer1.RefreshReport()
+            Patient.ListByYear(CmsDataSet1.Patient, year, "", "PUI")
         ElseIf cbReport.Text = "PUM" Then
-            Dim detail As New PersonDetails(PersonDetails.DETAILS_PUM)
+            title = "Covid-19 PUM Cases in " & year
 
-            detail.ListByYear(cmsDataSet.Positive, cbFrom.Text)
+            Patient.ListByYear(CmsDataSet1.Patient, year, "", "PUM")
 
+        ElseIf cbReport.Text = "Recovered" Then
+            title = "Covid-19 Recovered Cases in " & year
 
-            Dim param1 As New List(Of ReportParameter)
-            param1.Add(New ReportParameter("title", "Covid-19 Cases as PUM in " & cbFrom.Text, True))
-            ReportViewer1.LocalReport.SetParameters(param1)
-            ReportViewer1.RefreshReport()
-
-        ElseIf cbReport.Text = "COVID19 Negative" Then
-
+            Patient.ListByYear(CmsDataSet1.Patient, year, "", "", "Recovered")
+        ElseIf cbReport.Text = "Death" Then
+            title = "Covid-19 Death Cases in " & year
+            Patient.ListByYear(CmsDataSet1.Patient, year, "", "", "Death")
         End If
+
+
+        param1.Add(New ReportParameter("title", title, True))
+        ReportViewer1.LocalReport.SetParameters(param1)
+        ReportViewer1.RefreshReport()
     End Sub
 End Class

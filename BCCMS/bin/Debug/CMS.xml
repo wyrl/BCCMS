@@ -32,6 +32,11 @@ CMS
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
 </member>
+<member name="P:CMS.My.Resources.Resources.death">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
 <member name="P:CMS.My.Resources.Resources.HubPages_1x1_CommunicableDiseases_a9cuob">
 <summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
@@ -52,32 +57,27 @@ CMS
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
 </member>
+<member name="P:CMS.My.Resources.Resources.recovered_icon">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
 <member name="T:CMS.cmsDataSet">
 <summary>
 Represents a strongly typed in-memory cache of data.
 </summary>
 </member>
-<member name="T:CMS.cmsDataSet.DeathDataTable">
+<member name="T:CMS.cmsDataSet.PatientDataTable">
 <summary>
 Represents the strongly named DataTable class.
 </summary>
 </member>
-<member name="T:CMS.cmsDataSet.LoginDataTable">
+<member name="T:CMS.cmsDataSet.HouseholdDataTable">
 <summary>
 Represents the strongly named DataTable class.
 </summary>
 </member>
-<member name="T:CMS.cmsDataSet.PersonDataTable">
-<summary>
-Represents the strongly named DataTable class.
-</summary>
-</member>
-<member name="T:CMS.cmsDataSet.PUI_detailsDataTable">
-<summary>
-Represents the strongly named DataTable class.
-</summary>
-</member>
-<member name="T:CMS.cmsDataSet.PUM_detailsDataTable">
+<member name="T:CMS.cmsDataSet.Isolation_facilitiesDataTable">
 <summary>
 Represents the strongly named DataTable class.
 </summary>
@@ -87,42 +87,22 @@ Represents the strongly named DataTable class.
 Represents the strongly named DataTable class.
 </summary>
 </member>
-<member name="T:CMS.cmsDataSet.RecoveredDataTable">
+<member name="T:CMS.cmsDataSet.Quarantine1DataTable">
 <summary>
 Represents the strongly named DataTable class.
 </summary>
 </member>
-<member name="T:CMS.cmsDataSet.PositiveDataTable">
-<summary>
-Represents the strongly named DataTable class.
-</summary>
-</member>
-<member name="T:CMS.cmsDataSet.NegativeDataTable">
-<summary>
-Represents the strongly named DataTable class.
-</summary>
-</member>
-<member name="T:CMS.cmsDataSet.DeathRow">
+<member name="T:CMS.cmsDataSet.PatientRow">
 <summary>
 Represents strongly named DataRow class.
 </summary>
 </member>
-<member name="T:CMS.cmsDataSet.LoginRow">
+<member name="T:CMS.cmsDataSet.HouseholdRow">
 <summary>
 Represents strongly named DataRow class.
 </summary>
 </member>
-<member name="T:CMS.cmsDataSet.PersonRow">
-<summary>
-Represents strongly named DataRow class.
-</summary>
-</member>
-<member name="T:CMS.cmsDataSet.PUI_detailsRow">
-<summary>
-Represents strongly named DataRow class.
-</summary>
-</member>
-<member name="T:CMS.cmsDataSet.PUM_detailsRow">
+<member name="T:CMS.cmsDataSet.Isolation_facilitiesRow">
 <summary>
 Represents strongly named DataRow class.
 </summary>
@@ -132,42 +112,22 @@ Represents strongly named DataRow class.
 Represents strongly named DataRow class.
 </summary>
 </member>
-<member name="T:CMS.cmsDataSet.RecoveredRow">
+<member name="T:CMS.cmsDataSet.Quarantine1Row">
 <summary>
 Represents strongly named DataRow class.
 </summary>
 </member>
-<member name="T:CMS.cmsDataSet.PositiveRow">
-<summary>
-Represents strongly named DataRow class.
-</summary>
-</member>
-<member name="T:CMS.cmsDataSet.NegativeRow">
-<summary>
-Represents strongly named DataRow class.
-</summary>
-</member>
-<member name="T:CMS.cmsDataSet.DeathRowChangeEvent">
+<member name="T:CMS.cmsDataSet.PatientRowChangeEvent">
 <summary>
 Row event argument class
 </summary>
 </member>
-<member name="T:CMS.cmsDataSet.LoginRowChangeEvent">
+<member name="T:CMS.cmsDataSet.HouseholdRowChangeEvent">
 <summary>
 Row event argument class
 </summary>
 </member>
-<member name="T:CMS.cmsDataSet.PersonRowChangeEvent">
-<summary>
-Row event argument class
-</summary>
-</member>
-<member name="T:CMS.cmsDataSet.PUI_detailsRowChangeEvent">
-<summary>
-Row event argument class
-</summary>
-</member>
-<member name="T:CMS.cmsDataSet.PUM_detailsRowChangeEvent">
+<member name="T:CMS.cmsDataSet.Isolation_facilitiesRowChangeEvent">
 <summary>
 Row event argument class
 </summary>
@@ -177,42 +137,22 @@ Row event argument class
 Row event argument class
 </summary>
 </member>
-<member name="T:CMS.cmsDataSet.RecoveredRowChangeEvent">
+<member name="T:CMS.cmsDataSet.Quarantine1RowChangeEvent">
 <summary>
 Row event argument class
 </summary>
 </member>
-<member name="T:CMS.cmsDataSet.PositiveRowChangeEvent">
-<summary>
-Row event argument class
-</summary>
-</member>
-<member name="T:CMS.cmsDataSet.NegativeRowChangeEvent">
-<summary>
-Row event argument class
-</summary>
-</member>
-<member name="T:CMS.cmsDataSetTableAdapters.DeathTableAdapter">
+<member name="T:CMS.cmsDataSetTableAdapters.PatientTableAdapter">
 <summary>
 Represents the connection and commands used to retrieve and save data.
 </summary>
 </member>
-<member name="T:CMS.cmsDataSetTableAdapters.LoginTableAdapter">
+<member name="T:CMS.cmsDataSetTableAdapters.HouseholdTableAdapter">
 <summary>
 Represents the connection and commands used to retrieve and save data.
 </summary>
 </member>
-<member name="T:CMS.cmsDataSetTableAdapters.PersonTableAdapter">
-<summary>
-Represents the connection and commands used to retrieve and save data.
-</summary>
-</member>
-<member name="T:CMS.cmsDataSetTableAdapters.PUI_detailsTableAdapter">
-<summary>
-Represents the connection and commands used to retrieve and save data.
-</summary>
-</member>
-<member name="T:CMS.cmsDataSetTableAdapters.PUM_detailsTableAdapter">
+<member name="T:CMS.cmsDataSetTableAdapters.Isolation_facilitiesTableAdapter">
 <summary>
 Represents the connection and commands used to retrieve and save data.
 </summary>
@@ -222,17 +162,7 @@ Represents the connection and commands used to retrieve and save data.
 Represents the connection and commands used to retrieve and save data.
 </summary>
 </member>
-<member name="T:CMS.cmsDataSetTableAdapters.RecoveredTableAdapter">
-<summary>
-Represents the connection and commands used to retrieve and save data.
-</summary>
-</member>
-<member name="T:CMS.cmsDataSetTableAdapters.PositiveTableAdapter">
-<summary>
-Represents the connection and commands used to retrieve and save data.
-</summary>
-</member>
-<member name="T:CMS.cmsDataSetTableAdapters.NegativeTableAdapter">
+<member name="T:CMS.cmsDataSetTableAdapters.Quarantine1TableAdapter">
 <summary>
 Represents the connection and commands used to retrieve and save data.
 </summary>

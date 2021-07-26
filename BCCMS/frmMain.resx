@@ -125,7 +125,7 @@
         AAEAAAD/////AQAAAAAAAAAMAgAAAFdTeXN0ZW0uV2luZG93cy5Gb3JtcywgVmVyc2lvbj00LjAuMC4w
         LCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWI3N2E1YzU2MTkzNGUwODkFAQAAACZTeXN0
         ZW0uV2luZG93cy5Gb3Jtcy5JbWFnZUxpc3RTdHJlYW1lcgEAAAAERGF0YQcCAgAAAAkDAAAADwMAAAAM
-        AwAAAk1TRnQBSQFMAwEBAAH4AQIB+AECASABAAEgAQAE/wEhAQAI/wFCAU0BNgcAATYDAAEoAwABgAMA
+        AwAAAk1TRnQBSQFMAwEBAAEYAQMBGAEDASABAAEgAQAE/wEhAQAI/wFCAU0BNgcAATYDAAEoAwABgAMA
         ASADAAEBAQABIAYAAUD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wA+AAMMARA4AAMjATT/AL0AAwwBEAj/
         MAADIwE0CP//ALkAA2EB7gz/KAADIwE0DP8DIwE0/wC5AANhAe4M/yAAAyMBNAz/AyMBNP8AwQADYQHu
         DP8YAAMjATQM/wMjATT/AMkAA2EB7gz/EAADIwE0DP8DIwE0/wDRAANhAe4M/wgAAyMBNAz/AyMBNP8A
@@ -6441,8 +6441,5 @@
   </metadata>
   <metadata name="Draggable2.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>242, 17</value>
-  </metadata>
-  <metadata name="RecoveredTableAdapter1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>357, 17</value>
   </metadata>
 </root>

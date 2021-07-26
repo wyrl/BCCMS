@@ -26,23 +26,22 @@ Partial Class frmQuarantine
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Panel2 = New System.Windows.Forms.Panel()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
+        Me.txtSearch = New System.Windows.Forms.TextBox()
+        Me.dgvPUI = New System.Windows.Forms.DataGridView()
         Me.PictureBox2 = New System.Windows.Forms.PictureBox()
         Me.CmsDataSet = New CMS.cmsDataSet()
-        Me.QuarantineBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.QuarantineTableAdapter = New CMS.cmsDataSetTableAdapters.QuarantineTableAdapter()
-        Me.dgvPUI = New System.Windows.Forms.DataGridView()
+        Me.Quarantine1BindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.Quarantine1TableAdapter = New CMS.cmsDataSetTableAdapters.Quarantine1TableAdapter()
         Me.FullnameDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DaysDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.StartdateDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.EnddateDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.RemarksDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Panel1.SuspendLayout()
         Me.Panel2.SuspendLayout()
+        CType(Me.dgvPUI, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.CmsDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.QuarantineBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.dgvPUI, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.Quarantine1BindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Panel1
@@ -70,7 +69,7 @@ Partial Class frmQuarantine
         '
         'Panel2
         '
-        Me.Panel2.Controls.Add(Me.TextBox1)
+        Me.Panel2.Controls.Add(Me.txtSearch)
         Me.Panel2.Controls.Add(Me.PictureBox2)
         Me.Panel2.Dock = System.Windows.Forms.DockStyle.Top
         Me.Panel2.Location = New System.Drawing.Point(0, 64)
@@ -78,14 +77,26 @@ Partial Class frmQuarantine
         Me.Panel2.Size = New System.Drawing.Size(780, 68)
         Me.Panel2.TabIndex = 14
         '
-        'TextBox1
+        'txtSearch
         '
-        Me.TextBox1.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.TextBox1.Font = New System.Drawing.Font("Segoe UI", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox1.Location = New System.Drawing.Point(525, 15)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(242, 39)
-        Me.TextBox1.TabIndex = 8
+        Me.txtSearch.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.txtSearch.Font = New System.Drawing.Font("Segoe UI", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtSearch.Location = New System.Drawing.Point(525, 15)
+        Me.txtSearch.Name = "txtSearch"
+        Me.txtSearch.Size = New System.Drawing.Size(242, 39)
+        Me.txtSearch.TabIndex = 8
+        '
+        'dgvPUI
+        '
+        Me.dgvPUI.AutoGenerateColumns = False
+        Me.dgvPUI.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.dgvPUI.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.FullnameDataGridViewTextBoxColumn, Me.StartdateDataGridViewTextBoxColumn, Me.EnddateDataGridViewTextBoxColumn, Me.RemarksDataGridViewTextBoxColumn})
+        Me.dgvPUI.DataSource = Me.Quarantine1BindingSource
+        Me.dgvPUI.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.dgvPUI.Location = New System.Drawing.Point(0, 132)
+        Me.dgvPUI.Name = "dgvPUI"
+        Me.dgvPUI.Size = New System.Drawing.Size(780, 543)
+        Me.dgvPUI.TabIndex = 15
         '
         'PictureBox2
         '
@@ -103,59 +114,41 @@ Partial Class frmQuarantine
         Me.CmsDataSet.DataSetName = "cmsDataSet"
         Me.CmsDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
         '
-        'QuarantineBindingSource
+        'Quarantine1BindingSource
         '
-        Me.QuarantineBindingSource.DataMember = "Quarantine"
-        Me.QuarantineBindingSource.DataSource = Me.CmsDataSet
+        Me.Quarantine1BindingSource.DataMember = "Quarantine1"
+        Me.Quarantine1BindingSource.DataSource = Me.CmsDataSet
         '
-        'QuarantineTableAdapter
+        'Quarantine1TableAdapter
         '
-        Me.QuarantineTableAdapter.ClearBeforeFill = True
-        '
-        'dgvPUI
-        '
-        Me.dgvPUI.AutoGenerateColumns = False
-        Me.dgvPUI.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.dgvPUI.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.FullnameDataGridViewTextBoxColumn, Me.DaysDataGridViewTextBoxColumn, Me.StartdateDataGridViewTextBoxColumn, Me.EnddateDataGridViewTextBoxColumn, Me.RemarksDataGridViewTextBoxColumn})
-        Me.dgvPUI.DataSource = Me.QuarantineBindingSource
-        Me.dgvPUI.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.dgvPUI.Location = New System.Drawing.Point(0, 132)
-        Me.dgvPUI.Name = "dgvPUI"
-        Me.dgvPUI.Size = New System.Drawing.Size(780, 543)
-        Me.dgvPUI.TabIndex = 15
+        Me.Quarantine1TableAdapter.ClearBeforeFill = True
         '
         'FullnameDataGridViewTextBoxColumn
         '
         Me.FullnameDataGridViewTextBoxColumn.DataPropertyName = "fullname"
         Me.FullnameDataGridViewTextBoxColumn.HeaderText = "Fullname"
         Me.FullnameDataGridViewTextBoxColumn.Name = "FullnameDataGridViewTextBoxColumn"
-        Me.FullnameDataGridViewTextBoxColumn.Width = 150
-        '
-        'DaysDataGridViewTextBoxColumn
-        '
-        Me.DaysDataGridViewTextBoxColumn.DataPropertyName = "days"
-        Me.DaysDataGridViewTextBoxColumn.HeaderText = "Days"
-        Me.DaysDataGridViewTextBoxColumn.Name = "DaysDataGridViewTextBoxColumn"
+        Me.FullnameDataGridViewTextBoxColumn.ReadOnly = True
+        Me.FullnameDataGridViewTextBoxColumn.Width = 200
         '
         'StartdateDataGridViewTextBoxColumn
         '
         Me.StartdateDataGridViewTextBoxColumn.DataPropertyName = "start_date"
         Me.StartdateDataGridViewTextBoxColumn.HeaderText = "Start Date"
         Me.StartdateDataGridViewTextBoxColumn.Name = "StartdateDataGridViewTextBoxColumn"
-        Me.StartdateDataGridViewTextBoxColumn.Width = 150
         '
         'EnddateDataGridViewTextBoxColumn
         '
         Me.EnddateDataGridViewTextBoxColumn.DataPropertyName = "end_date"
         Me.EnddateDataGridViewTextBoxColumn.HeaderText = "End Date"
         Me.EnddateDataGridViewTextBoxColumn.Name = "EnddateDataGridViewTextBoxColumn"
-        Me.EnddateDataGridViewTextBoxColumn.Width = 150
         '
         'RemarksDataGridViewTextBoxColumn
         '
-        Me.RemarksDataGridViewTextBoxColumn.DataPropertyName = "remarks"
+        Me.RemarksDataGridViewTextBoxColumn.DataPropertyName = "Remarks"
         Me.RemarksDataGridViewTextBoxColumn.HeaderText = "Remarks"
         Me.RemarksDataGridViewTextBoxColumn.Name = "RemarksDataGridViewTextBoxColumn"
+        Me.RemarksDataGridViewTextBoxColumn.Width = 200
         '
         'frmQuarantine
         '
@@ -169,10 +162,10 @@ Partial Class frmQuarantine
         Me.Panel1.PerformLayout()
         Me.Panel2.ResumeLayout(False)
         Me.Panel2.PerformLayout()
+        CType(Me.dgvPUI, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.CmsDataSet, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.QuarantineBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.dgvPUI, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.Quarantine1BindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -180,14 +173,13 @@ Partial Class frmQuarantine
     Friend WithEvents Panel1 As Panel
     Friend WithEvents Label1 As Label
     Friend WithEvents Panel2 As Panel
-    Friend WithEvents TextBox1 As TextBox
+    Friend WithEvents txtSearch As TextBox
     Friend WithEvents PictureBox2 As PictureBox
-    Friend WithEvents QuarantineBindingSource As BindingSource
-    Friend WithEvents CmsDataSet As cmsDataSet
-    Friend WithEvents QuarantineTableAdapter As cmsDataSetTableAdapters.QuarantineTableAdapter
     Friend WithEvents dgvPUI As DataGridView
+    Friend WithEvents Quarantine1BindingSource As BindingSource
+    Friend WithEvents CmsDataSet As cmsDataSet
+    Friend WithEvents Quarantine1TableAdapter As cmsDataSetTableAdapters.Quarantine1TableAdapter
     Friend WithEvents FullnameDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
-    Friend WithEvents DaysDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
     Friend WithEvents StartdateDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
     Friend WithEvents EnddateDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
     Friend WithEvents RemarksDataGridViewTextBoxColumn As DataGridViewTextBoxColumn

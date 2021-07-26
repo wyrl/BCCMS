@@ -4,9 +4,10 @@
     End Sub
 
     Public Sub RefreshData()
-        Dim details As New PersonDetails(PersonDetails.DETAILS_PUM)
+        Patient.Search2(CmsDataSet.Patient, txtSearch.Text, "", "PUM")
+    End Sub
 
-        CmsDataSet.PUM_details.Clear()
-        details.List(CmsDataSet.PUM_details)
+    Private Sub txtSearch_TextChanged(sender As Object, e As EventArgs) Handles txtSearch.TextChanged
+        RefreshData()
     End Sub
 End Class

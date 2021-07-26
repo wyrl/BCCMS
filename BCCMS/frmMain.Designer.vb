@@ -39,9 +39,8 @@ Partial Class frmMain
         Me.Draggable1 = New Mimobibo.Draggable(Me.components)
         Me.Draggable2 = New Mimobibo.Draggable(Me.components)
         Me.Headline1 = New CMS.Headline()
-        Me.PersonManagement1 = New CMS.PersonManagement()
+        Me.PersonManagement1 = New CMS.PatientManagement()
         Me.Reports1 = New CMS.Reports()
-        Me.RecoveredTableAdapter1 = New CMS.cmsDataSetTableAdapters.RecoveredTableAdapter()
         Me.Panel1.SuspendLayout()
         Me.pnlSidebar.SuspendLayout()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -231,10 +230,6 @@ Partial Class frmMain
         Me.Reports1.Size = New System.Drawing.Size(814, 736)
         Me.Reports1.TabIndex = 7
         '
-        'RecoveredTableAdapter1
-        '
-        Me.RecoveredTableAdapter1.ClearBeforeFill = True
-        '
         'frmMain
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -273,7 +268,6 @@ Partial Class frmMain
     Friend WithEvents btnContactTracing As Button
     Friend WithEvents PictureBox2 As PictureBox
     Friend WithEvents Headline1 As Headline
-    Friend WithEvents PersonManagement1 As PersonManagement
+    Friend WithEvents PersonManagement1 As PatientManagement
     Friend WithEvents Reports1 As Reports
-    Friend WithEvents RecoveredTableAdapter1 As cmsDataSetTableAdapters.RecoveredTableAdapter
 End Class

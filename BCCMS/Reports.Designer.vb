@@ -23,20 +23,19 @@ Partial Class Reports
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
-        Dim ReportDataSource1 As Microsoft.Reporting.WinForms.ReportDataSource = New Microsoft.Reporting.WinForms.ReportDataSource()
         Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.Label3 = New System.Windows.Forms.Label()
+        Me.cbReport = New System.Windows.Forms.ComboBox()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.cbFrom = New System.Windows.Forms.ComboBox()
-        Me.cbReport = New System.Windows.Forms.ComboBox()
-        Me.Label3 = New System.Windows.Forms.Label()
+        Me.CmsDataSet1 = New CMS.cmsDataSet()
+        Me.BindingSource1 = New System.Windows.Forms.BindingSource(Me.components)
+        Me.PatientTableAdapter = New CMS.cmsDataSetTableAdapters.PatientTableAdapter()
         Me.ReportViewer1 = New Microsoft.Reporting.WinForms.ReportViewer()
-        Me.PositiveBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.cmsDataSet = New CMS.cmsDataSet()
-        Me.PositiveTableAdapter = New CMS.cmsDataSetTableAdapters.PositiveTableAdapter()
         Me.Panel1.SuspendLayout()
-        CType(Me.PositiveBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.cmsDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.CmsDataSet1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.BindingSource1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Panel1
@@ -51,6 +50,27 @@ Partial Class Reports
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(963, 99)
         Me.Panel1.TabIndex = 0
+        '
+        'Label3
+        '
+        Me.Label3.AutoSize = True
+        Me.Label3.Font = New System.Drawing.Font("Segoe UI", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label3.Location = New System.Drawing.Point(11, 20)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(57, 20)
+        Me.Label3.TabIndex = 6
+        Me.Label3.Text = "Report:"
+        '
+        'cbReport
+        '
+        Me.cbReport.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.cbReport.Font = New System.Drawing.Font("Segoe UI", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.cbReport.FormattingEnabled = True
+        Me.cbReport.Items.AddRange(New Object() {"Confirmed Cases", "PUI", "PUM", "Recovered", "Death"})
+        Me.cbReport.Location = New System.Drawing.Point(85, 17)
+        Me.cbReport.Name = "cbReport"
+        Me.cbReport.Size = New System.Drawing.Size(223, 28)
+        Me.cbReport.TabIndex = 5
         '
         'Button1
         '
@@ -82,53 +102,29 @@ Partial Class Reports
         Me.cbFrom.Size = New System.Drawing.Size(121, 28)
         Me.cbFrom.TabIndex = 0
         '
-        'cbReport
+        'CmsDataSet1
         '
-        Me.cbReport.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-        Me.cbReport.Font = New System.Drawing.Font("Segoe UI", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.cbReport.FormattingEnabled = True
-        Me.cbReport.Items.AddRange(New Object() {"PUI", "PUM", "COVID19 Positive", "COVID19 Negative"})
-        Me.cbReport.Location = New System.Drawing.Point(85, 17)
-        Me.cbReport.Name = "cbReport"
-        Me.cbReport.Size = New System.Drawing.Size(223, 28)
-        Me.cbReport.TabIndex = 5
+        Me.CmsDataSet1.DataSetName = "cmsDataSet"
+        Me.CmsDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
         '
-        'Label3
+        'BindingSource1
         '
-        Me.Label3.AutoSize = True
-        Me.Label3.Font = New System.Drawing.Font("Segoe UI", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.Location = New System.Drawing.Point(11, 20)
-        Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(57, 20)
-        Me.Label3.TabIndex = 6
-        Me.Label3.Text = "Report:"
+        Me.BindingSource1.DataMember = "Patient"
+        Me.BindingSource1.DataSource = Me.CmsDataSet1
+        '
+        'PatientTableAdapter
+        '
+        Me.PatientTableAdapter.ClearBeforeFill = True
         '
         'ReportViewer1
         '
         Me.ReportViewer1.Dock = System.Windows.Forms.DockStyle.Fill
-        ReportDataSource1.Name = "DataSet1"
-        ReportDataSource1.Value = Me.PositiveBindingSource
-        Me.ReportViewer1.LocalReport.DataSources.Add(ReportDataSource1)
         Me.ReportViewer1.LocalReport.ReportEmbeddedResource = "CMS.Covid19Report.rdlc"
         Me.ReportViewer1.Location = New System.Drawing.Point(0, 99)
         Me.ReportViewer1.Name = "ReportViewer1"
         Me.ReportViewer1.ServerReport.BearerToken = Nothing
         Me.ReportViewer1.Size = New System.Drawing.Size(963, 448)
         Me.ReportViewer1.TabIndex = 1
-        '
-        'PositiveBindingSource
-        '
-        Me.PositiveBindingSource.DataMember = "Positive"
-        Me.PositiveBindingSource.DataSource = Me.cmsDataSet
-        '
-        'cmsDataSet
-        '
-        Me.cmsDataSet.DataSetName = "cmsDataSet"
-        Me.cmsDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
-        '
-        'PositiveTableAdapter
-        '
-        Me.PositiveTableAdapter.ClearBeforeFill = True
         '
         'Reports
         '
@@ -140,8 +136,8 @@ Partial Class Reports
         Me.Size = New System.Drawing.Size(963, 547)
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
-        CType(Me.PositiveBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.cmsDataSet, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.CmsDataSet1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.BindingSource1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -152,8 +148,8 @@ Partial Class Reports
     Friend WithEvents Button1 As Button
     Friend WithEvents Label3 As Label
     Friend WithEvents cbReport As ComboBox
+    Friend WithEvents CmsDataSet1 As cmsDataSet
+    Friend WithEvents BindingSource1 As BindingSource
+    Friend WithEvents PatientTableAdapter As cmsDataSetTableAdapters.PatientTableAdapter
     Friend WithEvents ReportViewer1 As Microsoft.Reporting.WinForms.ReportViewer
-    Friend WithEvents PositiveBindingSource As BindingSource
-    Friend WithEvents cmsDataSet As cmsDataSet
-    Friend WithEvents PositiveTableAdapter As cmsDataSetTableAdapters.PositiveTableAdapter
 End Class

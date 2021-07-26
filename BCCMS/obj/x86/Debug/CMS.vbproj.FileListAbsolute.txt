@@ -47,8 +47,6 @@ C:\Users\Admin\Desktop\BCCMS-main\BCCMS-main\BCCMS\obj\x86\Debug\CMS.frmPUM.reso
 C:\Users\Admin\Desktop\BCCMS-main\BCCMS-main\BCCMS\obj\x86\Debug\CMS.frmQuarantine.resources
 C:\Users\Admin\Desktop\BCCMS-main\BCCMS-main\BCCMS\obj\x86\Debug\CMS.frmRecovered.resources
 C:\Users\Admin\Desktop\BCCMS-main\BCCMS-main\BCCMS\obj\x86\Debug\CMS.Resources.resources
-C:\Users\Admin\Desktop\BCCMS-main\BCCMS-main\BCCMS\obj\x86\Debug\CMS.frmPersonRegister.resources
-C:\Users\Admin\Desktop\BCCMS-main\BCCMS-main\BCCMS\obj\x86\Debug\CMS.PersonManagement.resources
 C:\Users\Admin\Desktop\BCCMS-main\BCCMS-main\BCCMS\obj\x86\Debug\CMS.Reports.resources
 C:\Users\Admin\Desktop\BCCMS-main\BCCMS-main\BCCMS\obj\x86\Debug\CMS.Test.resources
 C:\Users\Admin\Desktop\BCCMS-main\BCCMS-main\BCCMS\obj\x86\Debug\CMS.vbproj.GenerateResource.cache
@@ -112,3 +110,7 @@ C:\Users\Admin\Desktop\BCCMS-main\BCCMS-main\BCCMS\bin\Debug\pt\Microsoft.Report
 C:\Users\Admin\Desktop\BCCMS-main\BCCMS-main\BCCMS\bin\Debug\ru\Microsoft.ReportViewer.WinForms.resources.dll
 C:\Users\Admin\Desktop\BCCMS-main\BCCMS-main\BCCMS\bin\Debug\zh-CHS\Microsoft.ReportViewer.WinForms.resources.dll
 C:\Users\Admin\Desktop\BCCMS-main\BCCMS-main\BCCMS\bin\Debug\zh-CHT\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\Admin\Desktop\BCCMS-main\BCCMS-main\BCCMS\obj\x86\Debug\CMS.frmPatientRegister.resources
+C:\Users\Admin\Desktop\BCCMS-main\BCCMS-main\BCCMS\obj\x86\Debug\CMS.HouseholdRegister.resources
+C:\Users\Admin\Desktop\BCCMS-main\BCCMS-main\BCCMS\obj\x86\Debug\CMS.PatientManagement.resources
+C:\Users\Admin\Desktop\BCCMS-main\BCCMS-main\BCCMS\obj\x86\Debug\CMS.frmPositiveCases.resources

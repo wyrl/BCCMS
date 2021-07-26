@@ -1,10 +1,9 @@
 ﻿Public Class frmPUI
     Public Sub RefreshData()
-        Dim pui As New PersonDetails(PersonDetails.DETAILS_PUI)
+        Patient.Search2(CmsDataSet.Patient, txtSearch.Text, "", "PUI")
+    End Sub
 
-        CmsDataSet.PUI_details.Clear()
-        pui.List(CmsDataSet.PUI_details)
-
-
+    Private Sub txtSearch_TextChanged(sender As Object, e As EventArgs) Handles txtSearch.TextChanged
+        RefreshData()
     End Sub
 End Class

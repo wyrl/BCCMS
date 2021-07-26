@@ -1,5 +1,5 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
-Partial Class frmPersonRegister
+Partial Class frmPatientRegister
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
@@ -23,7 +23,7 @@ Partial Class frmPersonRegister
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
-        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmPersonRegister))
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmPatientRegister))
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Button1 = New System.Windows.Forms.Button()
@@ -34,14 +34,11 @@ Partial Class frmPersonRegister
         Me.txtLastname = New System.Windows.Forms.TextBox()
         Me.txtProvince = New System.Windows.Forms.TextBox()
         Me.txtCity = New System.Windows.Forms.TextBox()
-        Me.Label8 = New System.Windows.Forms.Label()
         Me.Label9 = New System.Windows.Forms.Label()
         Me.cbPurok = New System.Windows.Forms.ComboBox()
-        Me.Label10 = New System.Windows.Forms.Label()
         Me.cbMonth = New System.Windows.Forms.ComboBox()
         Me.cbDay = New System.Windows.Forms.ComboBox()
         Me.cbYear = New System.Windows.Forms.ComboBox()
-        Me.cbStatus = New System.Windows.Forms.ComboBox()
         Me.btnSave = New System.Windows.Forms.Button()
         Me.btnCancel = New System.Windows.Forms.Button()
         Me.Label13 = New System.Windows.Forms.Label()
@@ -51,13 +48,23 @@ Partial Class frmPersonRegister
         Me.cbBarangay = New System.Windows.Forms.ComboBox()
         Me.txtPhone = New System.Windows.Forms.TextBox()
         Me.Label17 = New System.Windows.Forms.Label()
-        Me.Label18 = New System.Windows.Forms.Label()
         Me.cbRemarks = New System.Windows.Forms.ComboBox()
         Me.Label20 = New System.Windows.Forms.Label()
         Me.chkIllnesses = New System.Windows.Forms.CheckedListBox()
         Me.txtTemperature = New System.Windows.Forms.TextBox()
         Me.txtCarrier = New System.Windows.Forms.TextBox()
         Me.gbPatientInfo = New System.Windows.Forms.GroupBox()
+        Me.cbIsolationFacility = New System.Windows.Forms.ComboBox()
+        Me.IsolationfacilitiesBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.CmsDataSet1 = New CMS.cmsDataSet()
+        Me.Label8 = New System.Windows.Forms.Label()
+        Me.txtHouseHold = New System.Windows.Forms.TextBox()
+        Me.Label7 = New System.Windows.Forms.Label()
+        Me.Label6 = New System.Windows.Forms.Label()
+        Me.LinkLabel1 = New System.Windows.Forms.LinkLabel()
+        Me.Label5 = New System.Windows.Forms.Label()
+        Me.Label2 = New System.Windows.Forms.Label()
+        Me.cbGender = New System.Windows.Forms.ComboBox()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.lblCase = New System.Windows.Forms.Label()
         Me.rbPUM = New System.Windows.Forms.RadioButton()
@@ -73,20 +80,23 @@ Partial Class frmPersonRegister
         Me.Label31 = New System.Windows.Forms.Label()
         Me.Label36 = New System.Windows.Forms.Label()
         Me.Label35 = New System.Windows.Forms.Label()
-        Me.Label32 = New System.Windows.Forms.Label()
         Me.Label34 = New System.Windows.Forms.Label()
+        Me.HouseholdBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.gbCarrier = New System.Windows.Forms.GroupBox()
         Me.Label43 = New System.Windows.Forms.Label()
         Me.Draggable1 = New Mimobibo.Draggable(Me.components)
         Me.Draggable2 = New Mimobibo.Draggable(Me.components)
-        Me.CmsDataSet = New CMS.cmsDataSet()
-        Me.PersonBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.PersonTableAdapter = New CMS.cmsDataSetTableAdapters.PersonTableAdapter()
+        Me.PatientTableAdapter1 = New CMS.cmsDataSetTableAdapters.PatientTableAdapter()
+        Me.HouseholdTableAdapter = New CMS.cmsDataSetTableAdapters.HouseholdTableAdapter()
+        Me.Isolation_facilitiesTableAdapter = New CMS.cmsDataSetTableAdapters.Isolation_facilitiesTableAdapter()
+        Me.cbStatus = New System.Windows.Forms.ComboBox()
+        Me.Label10 = New System.Windows.Forms.Label()
         Me.Panel1.SuspendLayout()
         Me.gbPatientInfo.SuspendLayout()
+        CType(Me.IsolationfacilitiesBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.CmsDataSet1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.HouseholdBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.gbCarrier.SuspendLayout()
-        CType(Me.CmsDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PersonBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Panel1
@@ -97,7 +107,7 @@ Partial Class frmPersonRegister
         Me.Panel1.Dock = System.Windows.Forms.DockStyle.Top
         Me.Panel1.Location = New System.Drawing.Point(0, 0)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(785, 64)
+        Me.Panel1.Size = New System.Drawing.Size(844, 64)
         Me.Panel1.TabIndex = 1
         '
         'Label1
@@ -120,7 +130,7 @@ Partial Class frmPersonRegister
         Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button1.ImageIndex = 0
         Me.Button1.ImageList = Me.ImageList1
-        Me.Button1.Location = New System.Drawing.Point(733, 11)
+        Me.Button1.Location = New System.Drawing.Point(792, 11)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(40, 37)
         Me.Button1.TabIndex = 31
@@ -135,7 +145,7 @@ Partial Class frmPersonRegister
         'txtFirstname
         '
         Me.txtFirstname.Font = New System.Drawing.Font("Segoe UI", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtFirstname.Location = New System.Drawing.Point(125, 36)
+        Me.txtFirstname.Location = New System.Drawing.Point(155, 127)
         Me.txtFirstname.Name = "txtFirstname"
         Me.txtFirstname.Size = New System.Drawing.Size(201, 35)
         Me.txtFirstname.TabIndex = 2
@@ -144,7 +154,7 @@ Partial Class frmPersonRegister
         '
         Me.Label3.AutoSize = True
         Me.Label3.Font = New System.Drawing.Font("Segoe UI", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.Location = New System.Drawing.Point(45, 36)
+        Me.Label3.Location = New System.Drawing.Point(75, 127)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(74, 30)
         Me.Label3.TabIndex = 4
@@ -153,7 +163,7 @@ Partial Class frmPersonRegister
         'txtMiddlename
         '
         Me.txtMiddlename.Font = New System.Drawing.Font("Segoe UI", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtMiddlename.Location = New System.Drawing.Point(328, 36)
+        Me.txtMiddlename.Location = New System.Drawing.Point(358, 127)
         Me.txtMiddlename.Name = "txtMiddlename"
         Me.txtMiddlename.Size = New System.Drawing.Size(201, 35)
         Me.txtMiddlename.TabIndex = 3
@@ -161,7 +171,7 @@ Partial Class frmPersonRegister
         'txtLastname
         '
         Me.txtLastname.Font = New System.Drawing.Font("Segoe UI", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtLastname.Location = New System.Drawing.Point(533, 36)
+        Me.txtLastname.Location = New System.Drawing.Point(563, 127)
         Me.txtLastname.Name = "txtLastname"
         Me.txtLastname.Size = New System.Drawing.Size(201, 35)
         Me.txtLastname.TabIndex = 4
@@ -169,7 +179,7 @@ Partial Class frmPersonRegister
         'txtProvince
         '
         Me.txtProvince.Font = New System.Drawing.Font("Segoe UI", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtProvince.Location = New System.Drawing.Point(591, 121)
+        Me.txtProvince.Location = New System.Drawing.Point(621, 207)
         Me.txtProvince.Multiline = True
         Me.txtProvince.Name = "txtProvince"
         Me.txtProvince.Size = New System.Drawing.Size(143, 38)
@@ -178,27 +188,17 @@ Partial Class frmPersonRegister
         'txtCity
         '
         Me.txtCity.Font = New System.Drawing.Font("Segoe UI", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtCity.Location = New System.Drawing.Point(434, 120)
+        Me.txtCity.Location = New System.Drawing.Point(464, 206)
         Me.txtCity.Multiline = True
         Me.txtCity.Name = "txtCity"
         Me.txtCity.Size = New System.Drawing.Size(152, 38)
         Me.txtCity.TabIndex = 7
         '
-        'Label8
-        '
-        Me.Label8.AutoSize = True
-        Me.Label8.Font = New System.Drawing.Font("Segoe UI", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label8.Location = New System.Drawing.Point(27, 123)
-        Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(92, 30)
-        Me.Label8.TabIndex = 11
-        Me.Label8.Text = "Address:"
-        '
         'Label9
         '
         Me.Label9.AutoSize = True
         Me.Label9.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label9.Location = New System.Drawing.Point(313, 162)
+        Me.Label9.Location = New System.Drawing.Point(343, 248)
         Me.Label9.Name = "Label9"
         Me.Label9.Size = New System.Drawing.Size(75, 21)
         Me.Label9.TabIndex = 10
@@ -208,29 +208,19 @@ Partial Class frmPersonRegister
         '
         Me.cbPurok.Font = New System.Drawing.Font("Segoe UI", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.cbPurok.FormattingEnabled = True
-        Me.cbPurok.Location = New System.Drawing.Point(125, 120)
+        Me.cbPurok.Location = New System.Drawing.Point(155, 206)
         Me.cbPurok.Name = "cbPurok"
         Me.cbPurok.Size = New System.Drawing.Size(150, 38)
         Me.cbPurok.TabIndex = 5
-        '
-        'Label10
-        '
-        Me.Label10.AutoSize = True
-        Me.Label10.Font = New System.Drawing.Font("Segoe UI", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label10.Location = New System.Drawing.Point(17, 221)
-        Me.Label10.Name = "Label10"
-        Me.Label10.Size = New System.Drawing.Size(102, 30)
-        Me.Label10.TabIndex = 17
-        Me.Label10.Text = "Birthdate:"
         '
         'cbMonth
         '
         Me.cbMonth.Font = New System.Drawing.Font("Segoe UI", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.cbMonth.FormattingEnabled = True
         Me.cbMonth.Items.AddRange(New Object() {"January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"})
-        Me.cbMonth.Location = New System.Drawing.Point(119, 219)
+        Me.cbMonth.Location = New System.Drawing.Point(155, 290)
         Me.cbMonth.Name = "cbMonth"
-        Me.cbMonth.Size = New System.Drawing.Size(166, 38)
+        Me.cbMonth.Size = New System.Drawing.Size(160, 38)
         Me.cbMonth.TabIndex = 9
         '
         'cbDay
@@ -238,7 +228,7 @@ Partial Class frmPersonRegister
         Me.cbDay.Font = New System.Drawing.Font("Segoe UI", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.cbDay.FormattingEnabled = True
         Me.cbDay.Items.AddRange(New Object() {"1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "26", "27", "28", "29", "30", "31"})
-        Me.cbDay.Location = New System.Drawing.Point(291, 218)
+        Me.cbDay.Location = New System.Drawing.Point(321, 289)
         Me.cbDay.Name = "cbDay"
         Me.cbDay.Size = New System.Drawing.Size(61, 38)
         Me.cbDay.TabIndex = 10
@@ -248,27 +238,15 @@ Partial Class frmPersonRegister
         Me.cbYear.Font = New System.Drawing.Font("Segoe UI", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.cbYear.FormattingEnabled = True
         Me.cbYear.Items.AddRange(New Object() {"1980", "1981", "1982", "1983", "1984", "1985", "1986", "1987", "1988", "1989", "1990", "1991", "1992", "1993", "1994", "1995", "1996", "1997", "1998", "1999", "2000", "2001", "2002", "2003", "2004", "2005", "2006", "2007", "2008", "2009", "2010", "2011", "2012", "2013", "2014", "2015", "2016", "2017", "2018", "2019", "2020", "2021", "2022", "2023", "2024", "2025", "2026", "2027", "2028", "2029", "2030"})
-        Me.cbYear.Location = New System.Drawing.Point(356, 218)
+        Me.cbYear.Location = New System.Drawing.Point(386, 289)
         Me.cbYear.Name = "cbYear"
         Me.cbYear.Size = New System.Drawing.Size(110, 38)
         Me.cbYear.TabIndex = 11
         '
-        'cbStatus
-        '
-        Me.cbStatus.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-        Me.cbStatus.DropDownWidth = 500
-        Me.cbStatus.Font = New System.Drawing.Font("Segoe UI", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.cbStatus.FormattingEnabled = True
-        Me.cbStatus.Items.AddRange(New Object() {"Self-Quarantine(7 days)", "Self-Quarantine(14 days)", "Quarantine in Isolation Area (1 month)", "Quarantine in Isolation Area (2 months)", "Quarantine in Isolation Area (3 months)", "Extended quarantine until further notice"})
-        Me.cbStatus.Location = New System.Drawing.Point(317, 307)
-        Me.cbStatus.Name = "cbStatus"
-        Me.cbStatus.Size = New System.Drawing.Size(198, 38)
-        Me.cbStatus.TabIndex = 14
-        '
         'btnSave
         '
         Me.btnSave.Font = New System.Drawing.Font("Segoe UI", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnSave.Location = New System.Drawing.Point(472, 507)
+        Me.btnSave.Location = New System.Drawing.Point(502, 578)
         Me.btnSave.Name = "btnSave"
         Me.btnSave.Size = New System.Drawing.Size(124, 49)
         Me.btnSave.TabIndex = 17
@@ -278,7 +256,7 @@ Partial Class frmPersonRegister
         'btnCancel
         '
         Me.btnCancel.Font = New System.Drawing.Font("Segoe UI", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnCancel.Location = New System.Drawing.Point(610, 507)
+        Me.btnCancel.Location = New System.Drawing.Point(640, 578)
         Me.btnCancel.Name = "btnCancel"
         Me.btnCancel.Size = New System.Drawing.Size(124, 49)
         Me.btnCancel.TabIndex = 18
@@ -289,7 +267,7 @@ Partial Class frmPersonRegister
         '
         Me.Label13.AutoSize = True
         Me.Label13.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label13.Location = New System.Drawing.Point(174, 260)
+        Me.Label13.Location = New System.Drawing.Point(204, 331)
         Me.Label13.Name = "Label13"
         Me.Label13.Size = New System.Drawing.Size(56, 21)
         Me.Label13.TabIndex = 27
@@ -299,7 +277,7 @@ Partial Class frmPersonRegister
         '
         Me.Label14.AutoSize = True
         Me.Label14.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label14.Location = New System.Drawing.Point(305, 260)
+        Me.Label14.Location = New System.Drawing.Point(335, 331)
         Me.Label14.Name = "Label14"
         Me.Label14.Size = New System.Drawing.Size(37, 21)
         Me.Label14.TabIndex = 28
@@ -309,7 +287,7 @@ Partial Class frmPersonRegister
         '
         Me.Label15.AutoSize = True
         Me.Label15.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label15.Location = New System.Drawing.Point(390, 260)
+        Me.Label15.Location = New System.Drawing.Point(420, 331)
         Me.Label15.Name = "Label15"
         Me.Label15.Size = New System.Drawing.Size(40, 21)
         Me.Label15.TabIndex = 29
@@ -319,7 +297,7 @@ Partial Class frmPersonRegister
         '
         Me.Label16.AutoSize = True
         Me.Label16.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label16.Location = New System.Drawing.Point(159, 162)
+        Me.Label16.Location = New System.Drawing.Point(189, 248)
         Me.Label16.Name = "Label16"
         Me.Label16.Size = New System.Drawing.Size(51, 21)
         Me.Label16.TabIndex = 31
@@ -330,7 +308,7 @@ Partial Class frmPersonRegister
         Me.cbBarangay.Font = New System.Drawing.Font("Segoe UI", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.cbBarangay.FormattingEnabled = True
         Me.cbBarangay.Items.AddRange(New Object() {"Quisol", ""})
-        Me.cbBarangay.Location = New System.Drawing.Point(280, 120)
+        Me.cbBarangay.Location = New System.Drawing.Point(310, 206)
         Me.cbBarangay.Name = "cbBarangay"
         Me.cbBarangay.Size = New System.Drawing.Size(150, 38)
         Me.cbBarangay.TabIndex = 6
@@ -338,31 +316,21 @@ Partial Class frmPersonRegister
         'txtPhone
         '
         Me.txtPhone.Font = New System.Drawing.Font("Segoe UI", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtPhone.Location = New System.Drawing.Point(472, 218)
+        Me.txtPhone.Location = New System.Drawing.Point(597, 289)
         Me.txtPhone.Multiline = True
         Me.txtPhone.Name = "txtPhone"
-        Me.txtPhone.Size = New System.Drawing.Size(262, 38)
+        Me.txtPhone.Size = New System.Drawing.Size(167, 38)
         Me.txtPhone.TabIndex = 12
         '
         'Label17
         '
         Me.Label17.AutoSize = True
         Me.Label17.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label17.Location = New System.Drawing.Point(563, 260)
+        Me.Label17.Location = New System.Drawing.Point(647, 330)
         Me.Label17.Name = "Label17"
         Me.Label17.Size = New System.Drawing.Size(67, 21)
         Me.Label17.TabIndex = 33
         Me.Label17.Text = "Phone #"
-        '
-        'Label18
-        '
-        Me.Label18.AutoSize = True
-        Me.Label18.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label18.Location = New System.Drawing.Point(390, 348)
-        Me.Label18.Name = "Label18"
-        Me.Label18.Size = New System.Drawing.Size(52, 21)
-        Me.Label18.TabIndex = 36
-        Me.Label18.Text = "Status"
         '
         'cbRemarks
         '
@@ -371,7 +339,7 @@ Partial Class frmPersonRegister
         Me.cbRemarks.Font = New System.Drawing.Font("Segoe UI", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.cbRemarks.FormattingEnabled = True
         Me.cbRemarks.Items.AddRange(New Object() {"Positive", "Negative"})
-        Me.cbRemarks.Location = New System.Drawing.Point(119, 307)
+        Me.cbRemarks.Location = New System.Drawing.Point(149, 378)
         Me.cbRemarks.Name = "cbRemarks"
         Me.cbRemarks.Size = New System.Drawing.Size(192, 38)
         Me.cbRemarks.TabIndex = 13
@@ -380,11 +348,11 @@ Partial Class frmPersonRegister
         '
         Me.Label20.AutoSize = True
         Me.Label20.Font = New System.Drawing.Font("Segoe UI", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label20.Location = New System.Drawing.Point(17, 386)
+        Me.Label20.Location = New System.Drawing.Point(47, 457)
         Me.Label20.Name = "Label20"
-        Me.Label20.Size = New System.Drawing.Size(95, 30)
+        Me.Label20.Size = New System.Drawing.Size(90, 30)
         Me.Label20.TabIndex = 40
-        Me.Label20.Text = "Illnesses:"
+        Me.Label20.Text = "Ilnesses:"
         '
         'chkIllnesses
         '
@@ -393,7 +361,7 @@ Partial Class frmPersonRegister
         Me.chkIllnesses.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.chkIllnesses.FormattingEnabled = True
         Me.chkIllnesses.Items.AddRange(New Object() {"Cold", "Fever", "Cough", "Headache", "Stomache", "Heartache", "Dizziness", "Shortness of Breathing", "Backache"})
-        Me.chkIllnesses.Location = New System.Drawing.Point(119, 386)
+        Me.chkIllnesses.Location = New System.Drawing.Point(149, 457)
         Me.chkIllnesses.MultiColumn = True
         Me.chkIllnesses.Name = "chkIllnesses"
         Me.chkIllnesses.Size = New System.Drawing.Size(615, 100)
@@ -402,7 +370,7 @@ Partial Class frmPersonRegister
         'txtTemperature
         '
         Me.txtTemperature.Font = New System.Drawing.Font("Segoe UI", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtTemperature.Location = New System.Drawing.Point(521, 307)
+        Me.txtTemperature.Location = New System.Drawing.Point(551, 378)
         Me.txtTemperature.Multiline = True
         Me.txtTemperature.Name = "txtTemperature"
         Me.txtTemperature.Size = New System.Drawing.Size(213, 38)
@@ -413,13 +381,24 @@ Partial Class frmPersonRegister
         Me.txtCarrier.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend
         Me.txtCarrier.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource
         Me.txtCarrier.Font = New System.Drawing.Font("Segoe UI", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtCarrier.Location = New System.Drawing.Point(125, 34)
+        Me.txtCarrier.Location = New System.Drawing.Point(155, 34)
         Me.txtCarrier.Name = "txtCarrier"
         Me.txtCarrier.Size = New System.Drawing.Size(410, 35)
         Me.txtCarrier.TabIndex = 41
         '
         'gbPatientInfo
         '
+        Me.gbPatientInfo.Controls.Add(Me.Label10)
+        Me.gbPatientInfo.Controls.Add(Me.cbStatus)
+        Me.gbPatientInfo.Controls.Add(Me.cbIsolationFacility)
+        Me.gbPatientInfo.Controls.Add(Me.Label8)
+        Me.gbPatientInfo.Controls.Add(Me.txtHouseHold)
+        Me.gbPatientInfo.Controls.Add(Me.Label7)
+        Me.gbPatientInfo.Controls.Add(Me.Label6)
+        Me.gbPatientInfo.Controls.Add(Me.LinkLabel1)
+        Me.gbPatientInfo.Controls.Add(Me.Label5)
+        Me.gbPatientInfo.Controls.Add(Me.Label2)
+        Me.gbPatientInfo.Controls.Add(Me.cbGender)
         Me.gbPatientInfo.Controls.Add(Me.Label4)
         Me.gbPatientInfo.Controls.Add(Me.lblCase)
         Me.gbPatientInfo.Controls.Add(Me.rbPUM)
@@ -436,12 +415,10 @@ Partial Class frmPersonRegister
         Me.gbPatientInfo.Controls.Add(Me.Label20)
         Me.gbPatientInfo.Controls.Add(Me.Label9)
         Me.gbPatientInfo.Controls.Add(Me.Label27)
-        Me.gbPatientInfo.Controls.Add(Me.Label8)
         Me.gbPatientInfo.Controls.Add(Me.Label28)
         Me.gbPatientInfo.Controls.Add(Me.cbRemarks)
         Me.gbPatientInfo.Controls.Add(Me.txtCity)
         Me.gbPatientInfo.Controls.Add(Me.Label29)
-        Me.gbPatientInfo.Controls.Add(Me.Label18)
         Me.gbPatientInfo.Controls.Add(Me.txtProvince)
         Me.gbPatientInfo.Controls.Add(Me.Label30)
         Me.gbPatientInfo.Controls.Add(Me.Label17)
@@ -450,12 +427,10 @@ Partial Class frmPersonRegister
         Me.gbPatientInfo.Controls.Add(Me.cbPurok)
         Me.gbPatientInfo.Controls.Add(Me.Label31)
         Me.gbPatientInfo.Controls.Add(Me.Label16)
-        Me.gbPatientInfo.Controls.Add(Me.Label10)
         Me.gbPatientInfo.Controls.Add(Me.Label36)
         Me.gbPatientInfo.Controls.Add(Me.cbBarangay)
         Me.gbPatientInfo.Controls.Add(Me.cbMonth)
         Me.gbPatientInfo.Controls.Add(Me.Label35)
-        Me.gbPatientInfo.Controls.Add(Me.Label32)
         Me.gbPatientInfo.Controls.Add(Me.Label15)
         Me.gbPatientInfo.Controls.Add(Me.cbDay)
         Me.gbPatientInfo.Controls.Add(Me.Label34)
@@ -463,21 +438,126 @@ Partial Class frmPersonRegister
         Me.gbPatientInfo.Controls.Add(Me.cbYear)
         Me.gbPatientInfo.Controls.Add(Me.Label13)
         Me.gbPatientInfo.Controls.Add(Me.btnCancel)
-        Me.gbPatientInfo.Controls.Add(Me.cbStatus)
         Me.gbPatientInfo.Controls.Add(Me.btnSave)
         Me.gbPatientInfo.Font = New System.Drawing.Font("Segoe UI", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.gbPatientInfo.Location = New System.Drawing.Point(12, 171)
         Me.gbPatientInfo.Name = "gbPatientInfo"
-        Me.gbPatientInfo.Size = New System.Drawing.Size(761, 574)
+        Me.gbPatientInfo.Size = New System.Drawing.Size(808, 671)
         Me.gbPatientInfo.TabIndex = 48
         Me.gbPatientInfo.TabStop = False
         Me.gbPatientInfo.Text = "Patient Info"
+        '
+        'cbIsolationFacility
+        '
+        Me.cbIsolationFacility.DataSource = Me.IsolationfacilitiesBindingSource
+        Me.cbIsolationFacility.DisplayMember = "area"
+        Me.cbIsolationFacility.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.cbIsolationFacility.DropDownWidth = 500
+        Me.cbIsolationFacility.Font = New System.Drawing.Font("Segoe UI", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.cbIsolationFacility.FormattingEnabled = True
+        Me.cbIsolationFacility.Location = New System.Drawing.Point(474, 55)
+        Me.cbIsolationFacility.Name = "cbIsolationFacility"
+        Me.cbIsolationFacility.Size = New System.Drawing.Size(290, 38)
+        Me.cbIsolationFacility.TabIndex = 69
+        Me.cbIsolationFacility.ValueMember = "i_id"
+        '
+        'IsolationfacilitiesBindingSource
+        '
+        Me.IsolationfacilitiesBindingSource.DataMember = "Isolation_facilities"
+        Me.IsolationfacilitiesBindingSource.DataSource = Me.CmsDataSet1
+        '
+        'CmsDataSet1
+        '
+        Me.CmsDataSet1.DataSetName = "cmsDataSet"
+        Me.CmsDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        '
+        'Label8
+        '
+        Me.Label8.AutoSize = True
+        Me.Label8.Font = New System.Drawing.Font("Segoe UI", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label8.Location = New System.Drawing.Point(469, 22)
+        Me.Label8.Name = "Label8"
+        Me.Label8.Size = New System.Drawing.Size(165, 30)
+        Me.Label8.TabIndex = 65
+        Me.Label8.Text = "Isolation Facility:"
+        '
+        'txtHouseHold
+        '
+        Me.txtHouseHold.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend
+        Me.txtHouseHold.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource
+        Me.txtHouseHold.Font = New System.Drawing.Font("Segoe UI", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtHouseHold.Location = New System.Drawing.Point(155, 58)
+        Me.txtHouseHold.Name = "txtHouseHold"
+        Me.txtHouseHold.Size = New System.Drawing.Size(263, 35)
+        Me.txtHouseHold.TabIndex = 64
+        Me.txtHouseHold.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        '
+        'Label7
+        '
+        Me.Label7.AutoSize = True
+        Me.Label7.Font = New System.Drawing.Font("Segoe UI", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label7.Location = New System.Drawing.Point(150, 25)
+        Me.Label7.Name = "Label7"
+        Me.Label7.Size = New System.Drawing.Size(136, 30)
+        Me.Label7.TabIndex = 63
+        Me.Label7.Text = "Household #:"
+        '
+        'Label6
+        '
+        Me.Label6.AutoSize = True
+        Me.Label6.Font = New System.Drawing.Font("Segoe UI", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label6.Location = New System.Drawing.Point(309, 96)
+        Me.Label6.Name = "Label6"
+        Me.Label6.Size = New System.Drawing.Size(80, 20)
+        Me.Label6.TabIndex = 62
+        Me.Label6.Text = "to register."
+        '
+        'LinkLabel1
+        '
+        Me.LinkLabel1.AutoSize = True
+        Me.LinkLabel1.Font = New System.Drawing.Font("Segoe UI", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LinkLabel1.Location = New System.Drawing.Point(275, 95)
+        Me.LinkLabel1.Name = "LinkLabel1"
+        Me.LinkLabel1.Size = New System.Drawing.Size(38, 20)
+        Me.LinkLabel1.TabIndex = 61
+        Me.LinkLabel1.TabStop = True
+        Me.LinkLabel1.Text = "here"
+        '
+        'Label5
+        '
+        Me.Label5.AutoSize = True
+        Me.Label5.Font = New System.Drawing.Font("Segoe UI", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label5.Location = New System.Drawing.Point(160, 96)
+        Me.Label5.Name = "Label5"
+        Me.Label5.Size = New System.Drawing.Size(120, 20)
+        Me.Label5.TabIndex = 60
+        Me.Label5.Text = "If not exists, click"
+        '
+        'Label2
+        '
+        Me.Label2.AutoSize = True
+        Me.Label2.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label2.Location = New System.Drawing.Point(517, 331)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(61, 21)
+        Me.Label2.TabIndex = 48
+        Me.Label2.Text = "Gender"
+        '
+        'cbGender
+        '
+        Me.cbGender.Font = New System.Drawing.Font("Segoe UI", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.cbGender.FormattingEnabled = True
+        Me.cbGender.Items.AddRange(New Object() {"Male", "Female"})
+        Me.cbGender.Location = New System.Drawing.Point(502, 289)
+        Me.cbGender.Name = "cbGender"
+        Me.cbGender.Size = New System.Drawing.Size(89, 38)
+        Me.cbGender.TabIndex = 47
         '
         'Label4
         '
         Me.Label4.AutoSize = True
         Me.Label4.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label4.Location = New System.Drawing.Point(150, 348)
+        Me.Label4.Location = New System.Drawing.Point(180, 419)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(125, 21)
         Me.Label4.TabIndex = 46
@@ -487,7 +567,7 @@ Partial Class frmPersonRegister
         '
         Me.lblCase.AutoSize = True
         Me.lblCase.Font = New System.Drawing.Font("Segoe UI", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblCase.Location = New System.Drawing.Point(45, 512)
+        Me.lblCase.Location = New System.Drawing.Point(75, 583)
         Me.lblCase.Name = "lblCase"
         Me.lblCase.Size = New System.Drawing.Size(62, 30)
         Me.lblCase.TabIndex = 45
@@ -497,7 +577,7 @@ Partial Class frmPersonRegister
         'rbPUM
         '
         Me.rbPUM.AutoSize = True
-        Me.rbPUM.Location = New System.Drawing.Point(210, 514)
+        Me.rbPUM.Location = New System.Drawing.Point(262, 585)
         Me.rbPUM.Name = "rbPUM"
         Me.rbPUM.Size = New System.Drawing.Size(76, 34)
         Me.rbPUM.TabIndex = 42
@@ -508,7 +588,7 @@ Partial Class frmPersonRegister
         'rbPUI
         '
         Me.rbPUI.AutoSize = True
-        Me.rbPUI.Location = New System.Drawing.Point(119, 514)
+        Me.rbPUI.Location = New System.Drawing.Point(166, 585)
         Me.rbPUI.Name = "rbPUI"
         Me.rbPUI.Size = New System.Drawing.Size(63, 34)
         Me.rbPUI.TabIndex = 41
@@ -520,7 +600,7 @@ Partial Class frmPersonRegister
         '
         Me.Label23.AutoSize = True
         Me.Label23.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label23.Location = New System.Drawing.Point(182, 74)
+        Me.Label23.Location = New System.Drawing.Point(212, 165)
         Me.Label23.Name = "Label23"
         Me.Label23.Size = New System.Drawing.Size(79, 21)
         Me.Label23.TabIndex = 3
@@ -530,7 +610,7 @@ Partial Class frmPersonRegister
         '
         Me.Label26.AutoSize = True
         Me.Label26.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label26.Location = New System.Drawing.Point(382, 74)
+        Me.Label26.Location = New System.Drawing.Point(412, 165)
         Me.Label26.Name = "Label26"
         Me.Label26.Size = New System.Drawing.Size(97, 21)
         Me.Label26.TabIndex = 6
@@ -540,7 +620,7 @@ Partial Class frmPersonRegister
         '
         Me.Label41.AutoSize = True
         Me.Label41.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label41.Location = New System.Drawing.Point(587, 348)
+        Me.Label41.Location = New System.Drawing.Point(617, 419)
         Me.Label41.Name = "Label41"
         Me.Label41.Size = New System.Drawing.Size(97, 21)
         Me.Label41.TabIndex = 39
@@ -550,7 +630,7 @@ Partial Class frmPersonRegister
         '
         Me.Label27.AutoSize = True
         Me.Label27.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label27.Location = New System.Drawing.Point(595, 74)
+        Me.Label27.Location = New System.Drawing.Point(625, 165)
         Me.Label27.Name = "Label27"
         Me.Label27.Size = New System.Drawing.Size(77, 21)
         Me.Label27.TabIndex = 8
@@ -560,7 +640,7 @@ Partial Class frmPersonRegister
         '
         Me.Label28.AutoSize = True
         Me.Label28.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label28.Location = New System.Drawing.Point(313, 162)
+        Me.Label28.Location = New System.Drawing.Point(343, 248)
         Me.Label28.Name = "Label28"
         Me.Label28.Size = New System.Drawing.Size(75, 21)
         Me.Label28.TabIndex = 10
@@ -570,7 +650,7 @@ Partial Class frmPersonRegister
         '
         Me.Label29.AutoSize = True
         Me.Label29.Font = New System.Drawing.Font("Segoe UI", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label29.Location = New System.Drawing.Point(27, 123)
+        Me.Label29.Location = New System.Drawing.Point(57, 209)
         Me.Label29.Name = "Label29"
         Me.Label29.Size = New System.Drawing.Size(92, 30)
         Me.Label29.TabIndex = 11
@@ -580,7 +660,7 @@ Partial Class frmPersonRegister
         '
         Me.Label30.AutoSize = True
         Me.Label30.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label30.Location = New System.Drawing.Point(487, 162)
+        Me.Label30.Location = New System.Drawing.Point(517, 248)
         Me.Label30.Name = "Label30"
         Me.Label30.Size = New System.Drawing.Size(37, 21)
         Me.Label30.TabIndex = 13
@@ -590,7 +670,7 @@ Partial Class frmPersonRegister
         '
         Me.Label37.AutoSize = True
         Me.Label37.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label37.Location = New System.Drawing.Point(159, 162)
+        Me.Label37.Location = New System.Drawing.Point(189, 248)
         Me.Label37.Name = "Label37"
         Me.Label37.Size = New System.Drawing.Size(51, 21)
         Me.Label37.TabIndex = 31
@@ -600,7 +680,7 @@ Partial Class frmPersonRegister
         '
         Me.Label31.AutoSize = True
         Me.Label31.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label31.Location = New System.Drawing.Point(628, 162)
+        Me.Label31.Location = New System.Drawing.Point(658, 248)
         Me.Label31.Name = "Label31"
         Me.Label31.Size = New System.Drawing.Size(70, 21)
         Me.Label31.TabIndex = 15
@@ -610,7 +690,7 @@ Partial Class frmPersonRegister
         '
         Me.Label36.AutoSize = True
         Me.Label36.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label36.Location = New System.Drawing.Point(390, 260)
+        Me.Label36.Location = New System.Drawing.Point(420, 331)
         Me.Label36.Name = "Label36"
         Me.Label36.Size = New System.Drawing.Size(40, 21)
         Me.Label36.TabIndex = 29
@@ -620,31 +700,26 @@ Partial Class frmPersonRegister
         '
         Me.Label35.AutoSize = True
         Me.Label35.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label35.Location = New System.Drawing.Point(305, 260)
+        Me.Label35.Location = New System.Drawing.Point(335, 331)
         Me.Label35.Name = "Label35"
         Me.Label35.Size = New System.Drawing.Size(37, 21)
         Me.Label35.TabIndex = 28
         Me.Label35.Text = "Day"
         '
-        'Label32
-        '
-        Me.Label32.AutoSize = True
-        Me.Label32.Font = New System.Drawing.Font("Segoe UI", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label32.Location = New System.Drawing.Point(17, 221)
-        Me.Label32.Name = "Label32"
-        Me.Label32.Size = New System.Drawing.Size(102, 30)
-        Me.Label32.TabIndex = 17
-        Me.Label32.Text = "Birthdate:"
-        '
         'Label34
         '
         Me.Label34.AutoSize = True
         Me.Label34.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label34.Location = New System.Drawing.Point(174, 260)
+        Me.Label34.Location = New System.Drawing.Point(204, 331)
         Me.Label34.Name = "Label34"
         Me.Label34.Size = New System.Drawing.Size(56, 21)
         Me.Label34.TabIndex = 27
         Me.Label34.Text = "Month"
+        '
+        'HouseholdBindingSource
+        '
+        Me.HouseholdBindingSource.DataMember = "Household"
+        Me.HouseholdBindingSource.DataSource = Me.CmsDataSet1
         '
         'gbCarrier
         '
@@ -653,7 +728,7 @@ Partial Class frmPersonRegister
         Me.gbCarrier.Font = New System.Drawing.Font("Segoe UI", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.gbCarrier.Location = New System.Drawing.Point(12, 70)
         Me.gbCarrier.Name = "gbCarrier"
-        Me.gbCarrier.Size = New System.Drawing.Size(761, 85)
+        Me.gbCarrier.Size = New System.Drawing.Size(808, 85)
         Me.gbCarrier.TabIndex = 49
         Me.gbCarrier.TabStop = False
         Me.gbCarrier.Text = "Carrier"
@@ -662,7 +737,7 @@ Partial Class frmPersonRegister
         '
         Me.Label43.AutoSize = True
         Me.Label43.Font = New System.Drawing.Font("Segoe UI", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label43.Location = New System.Drawing.Point(45, 39)
+        Me.Label43.Location = New System.Drawing.Point(75, 36)
         Me.Label43.Name = "Label43"
         Me.Label43.Size = New System.Drawing.Size(74, 30)
         Me.Label43.TabIndex = 48
@@ -678,40 +753,61 @@ Partial Class frmPersonRegister
         Me.Draggable2.TargetControl = Me.Label1
         Me.Draggable2.WindowForm = Me
         '
-        'CmsDataSet
+        'PatientTableAdapter1
         '
-        Me.CmsDataSet.DataSetName = "cmsDataSet"
-        Me.CmsDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        Me.PatientTableAdapter1.ClearBeforeFill = True
         '
-        'PersonBindingSource
+        'HouseholdTableAdapter
         '
-        Me.PersonBindingSource.DataMember = "Person"
-        Me.PersonBindingSource.DataSource = Me.CmsDataSet
+        Me.HouseholdTableAdapter.ClearBeforeFill = True
         '
-        'PersonTableAdapter
+        'Isolation_facilitiesTableAdapter
         '
-        Me.PersonTableAdapter.ClearBeforeFill = True
+        Me.Isolation_facilitiesTableAdapter.ClearBeforeFill = True
         '
-        'frmPersonRegister
+        'cbStatus
+        '
+        Me.cbStatus.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.cbStatus.DropDownWidth = 500
+        Me.cbStatus.Font = New System.Drawing.Font("Segoe UI", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.cbStatus.FormattingEnabled = True
+        Me.cbStatus.Items.AddRange(New Object() {"Self-Quarantine(7 days)", "Self-Quarantine(14 days)", "Quarantine in Isolation Area (1 month)", "Quarantine in Isolation Area (2 months)", "Quarantine in Isolation Area (3 months)", "Extended quarantine until further notice", "Recovered", "Death"})
+        Me.cbStatus.Location = New System.Drawing.Point(345, 378)
+        Me.cbStatus.Name = "cbStatus"
+        Me.cbStatus.Size = New System.Drawing.Size(201, 38)
+        Me.cbStatus.TabIndex = 70
+        '
+        'Label10
+        '
+        Me.Label10.AutoSize = True
+        Me.Label10.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label10.Location = New System.Drawing.Point(420, 419)
+        Me.Label10.Name = "Label10"
+        Me.Label10.Size = New System.Drawing.Size(52, 21)
+        Me.Label10.TabIndex = 71
+        Me.Label10.Text = "Status"
+        '
+        'frmPatientRegister
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(785, 767)
+        Me.ClientSize = New System.Drawing.Size(844, 865)
         Me.Controls.Add(Me.gbCarrier)
         Me.Controls.Add(Me.gbPatientInfo)
         Me.Controls.Add(Me.Panel1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
-        Me.Name = "frmPersonRegister"
+        Me.Name = "frmPatientRegister"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent
         Me.Text = "PatientRegister"
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
         Me.gbPatientInfo.ResumeLayout(False)
         Me.gbPatientInfo.PerformLayout()
+        CType(Me.IsolationfacilitiesBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.CmsDataSet1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.HouseholdBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         Me.gbCarrier.ResumeLayout(False)
         Me.gbCarrier.PerformLayout()
-        CType(Me.CmsDataSet, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PersonBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -725,16 +821,13 @@ Partial Class frmPersonRegister
     Friend WithEvents cbPurok As System.Windows.Forms.ComboBox
     Friend WithEvents txtProvince As System.Windows.Forms.TextBox
     Friend WithEvents txtCity As System.Windows.Forms.TextBox
-    Friend WithEvents Label8 As System.Windows.Forms.Label
     Friend WithEvents Label9 As System.Windows.Forms.Label
     Friend WithEvents txtLastname As System.Windows.Forms.TextBox
     Friend WithEvents txtMiddlename As System.Windows.Forms.TextBox
     Friend WithEvents Label3 As System.Windows.Forms.Label
-    Friend WithEvents Label10 As System.Windows.Forms.Label
     Friend WithEvents cbYear As System.Windows.Forms.ComboBox
     Friend WithEvents cbDay As System.Windows.Forms.ComboBox
     Friend WithEvents cbMonth As System.Windows.Forms.ComboBox
-    Friend WithEvents cbStatus As System.Windows.Forms.ComboBox
     Friend WithEvents btnCancel As System.Windows.Forms.Button
     Friend WithEvents btnSave As System.Windows.Forms.Button
     Friend WithEvents Label15 As System.Windows.Forms.Label
@@ -742,7 +835,6 @@ Partial Class frmPersonRegister
     Friend WithEvents Label13 As System.Windows.Forms.Label
     Friend WithEvents Label16 As Label
     Friend WithEvents cbBarangay As ComboBox
-    Friend WithEvents Label18 As Label
     Friend WithEvents Label17 As Label
     Friend WithEvents txtPhone As TextBox
     Friend WithEvents cbRemarks As ComboBox
@@ -764,13 +856,26 @@ Partial Class frmPersonRegister
     Friend WithEvents Label31 As Label
     Friend WithEvents Label36 As Label
     Friend WithEvents Label35 As Label
-    Friend WithEvents Label32 As Label
     Friend WithEvents Label34 As Label
     Friend WithEvents rbPUM As RadioButton
     Friend WithEvents rbPUI As RadioButton
-    Friend WithEvents CmsDataSet As cmsDataSet
-    Friend WithEvents PersonBindingSource As BindingSource
-    Friend WithEvents PersonTableAdapter As cmsDataSetTableAdapters.PersonTableAdapter
     Friend WithEvents lblCase As Label
     Friend WithEvents Label4 As Label
+    Friend WithEvents Label2 As Label
+    Friend WithEvents cbGender As ComboBox
+    Friend WithEvents PatientTableAdapter1 As cmsDataSetTableAdapters.PatientTableAdapter
+    Friend WithEvents CmsDataSet1 As cmsDataSet
+    Friend WithEvents Label6 As Label
+    Friend WithEvents LinkLabel1 As LinkLabel
+    Friend WithEvents Label5 As Label
+    Friend WithEvents Label7 As Label
+    Friend WithEvents HouseholdBindingSource As BindingSource
+    Friend WithEvents HouseholdTableAdapter As cmsDataSetTableAdapters.HouseholdTableAdapter
+    Friend WithEvents txtHouseHold As TextBox
+    Friend WithEvents Label8 As Label
+    Friend WithEvents cbIsolationFacility As ComboBox
+    Friend WithEvents IsolationfacilitiesBindingSource As BindingSource
+    Friend WithEvents Isolation_facilitiesTableAdapter As cmsDataSetTableAdapters.Isolation_facilitiesTableAdapter
+    Friend WithEvents Label10 As Label
+    Friend WithEvents cbStatus As ComboBox
 End Class

@@ -1,5 +1,5 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
-Partial Class PersonManagement
+Partial Class PatientManagement
     Inherits System.Windows.Forms.UserControl
 
     'UserControl overrides dispose to clean up the component list.
@@ -23,7 +23,7 @@ Partial Class PersonManagement
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
-        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(PersonManagement))
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(PatientManagement))
         Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
@@ -36,21 +36,20 @@ Partial Class PersonManagement
         Me.Button2 = New System.Windows.Forms.Button()
         Me.btnAddPerson = New System.Windows.Forms.Button()
         Me.dgvPatients = New System.Windows.Forms.DataGridView()
-        Me.fullname = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.address = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.PatientBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.CmsDataSet = New CMS.cmsDataSet()
+        Me.PatientTableAdapter = New CMS.cmsDataSetTableAdapters.PatientTableAdapter()
+        Me.FullnameDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.GenderDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.BirthdateDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.address = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.PhoneDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.IllnessesDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.TemperatureDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.RemarksDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.StatusDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.PersonBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.CmsDataSet = New CMS.cmsDataSet()
-        Me.PersonTableAdapter = New CMS.cmsDataSetTableAdapters.PersonTableAdapter()
         Me.Panel1.SuspendLayout()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.dgvPatients, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PersonBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PatientBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.CmsDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -166,8 +165,8 @@ Partial Class PersonManagement
         DataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
         Me.dgvPatients.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle1
         Me.dgvPatients.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.dgvPatients.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.fullname, Me.address, Me.BirthdateDataGridViewTextBoxColumn, Me.PhoneDataGridViewTextBoxColumn, Me.IllnessesDataGridViewTextBoxColumn, Me.TemperatureDataGridViewTextBoxColumn, Me.RemarksDataGridViewTextBoxColumn, Me.StatusDataGridViewTextBoxColumn})
-        Me.dgvPatients.DataSource = Me.PersonBindingSource
+        Me.dgvPatients.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.FullnameDataGridViewTextBoxColumn, Me.GenderDataGridViewTextBoxColumn, Me.BirthdateDataGridViewTextBoxColumn, Me.address, Me.PhoneDataGridViewTextBoxColumn, Me.RemarksDataGridViewTextBoxColumn, Me.StatusDataGridViewTextBoxColumn})
+        Me.dgvPatients.DataSource = Me.PatientBindingSource
         DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
         DataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window
         DataGridViewCellStyle2.Font = New System.Drawing.Font("Segoe UI", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -186,19 +185,33 @@ Partial Class PersonManagement
         Me.dgvPatients.Size = New System.Drawing.Size(781, 423)
         Me.dgvPatients.TabIndex = 3
         '
-        'fullname
+        'PatientBindingSource
         '
-        Me.fullname.DataPropertyName = "fullname"
-        Me.fullname.HeaderText = "Fullname"
-        Me.fullname.Name = "fullname"
-        Me.fullname.ReadOnly = True
+        Me.PatientBindingSource.DataMember = "Patient"
+        Me.PatientBindingSource.DataSource = Me.CmsDataSet
         '
-        'address
+        'CmsDataSet
         '
-        Me.address.DataPropertyName = "address"
-        Me.address.HeaderText = "Address"
-        Me.address.Name = "address"
-        Me.address.ReadOnly = True
+        Me.CmsDataSet.DataSetName = "cmsDataSet"
+        Me.CmsDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        '
+        'PatientTableAdapter
+        '
+        Me.PatientTableAdapter.ClearBeforeFill = True
+        '
+        'FullnameDataGridViewTextBoxColumn
+        '
+        Me.FullnameDataGridViewTextBoxColumn.DataPropertyName = "fullname"
+        Me.FullnameDataGridViewTextBoxColumn.HeaderText = "Fullname"
+        Me.FullnameDataGridViewTextBoxColumn.Name = "FullnameDataGridViewTextBoxColumn"
+        Me.FullnameDataGridViewTextBoxColumn.ReadOnly = True
+        '
+        'GenderDataGridViewTextBoxColumn
+        '
+        Me.GenderDataGridViewTextBoxColumn.DataPropertyName = "gender"
+        Me.GenderDataGridViewTextBoxColumn.HeaderText = "Gender"
+        Me.GenderDataGridViewTextBoxColumn.Name = "GenderDataGridViewTextBoxColumn"
+        Me.GenderDataGridViewTextBoxColumn.ReadOnly = True
         '
         'BirthdateDataGridViewTextBoxColumn
         '
@@ -207,26 +220,19 @@ Partial Class PersonManagement
         Me.BirthdateDataGridViewTextBoxColumn.Name = "BirthdateDataGridViewTextBoxColumn"
         Me.BirthdateDataGridViewTextBoxColumn.ReadOnly = True
         '
+        'address
+        '
+        Me.address.DataPropertyName = "address"
+        Me.address.HeaderText = "Address"
+        Me.address.Name = "address"
+        Me.address.ReadOnly = True
+        '
         'PhoneDataGridViewTextBoxColumn
         '
         Me.PhoneDataGridViewTextBoxColumn.DataPropertyName = "phone"
         Me.PhoneDataGridViewTextBoxColumn.HeaderText = "Phone"
         Me.PhoneDataGridViewTextBoxColumn.Name = "PhoneDataGridViewTextBoxColumn"
         Me.PhoneDataGridViewTextBoxColumn.ReadOnly = True
-        '
-        'IllnessesDataGridViewTextBoxColumn
-        '
-        Me.IllnessesDataGridViewTextBoxColumn.DataPropertyName = "illnesses"
-        Me.IllnessesDataGridViewTextBoxColumn.HeaderText = "Illnesses"
-        Me.IllnessesDataGridViewTextBoxColumn.Name = "IllnessesDataGridViewTextBoxColumn"
-        Me.IllnessesDataGridViewTextBoxColumn.ReadOnly = True
-        '
-        'TemperatureDataGridViewTextBoxColumn
-        '
-        Me.TemperatureDataGridViewTextBoxColumn.DataPropertyName = "temperature"
-        Me.TemperatureDataGridViewTextBoxColumn.HeaderText = "Temperature"
-        Me.TemperatureDataGridViewTextBoxColumn.Name = "TemperatureDataGridViewTextBoxColumn"
-        Me.TemperatureDataGridViewTextBoxColumn.ReadOnly = True
         '
         'RemarksDataGridViewTextBoxColumn
         '
@@ -242,20 +248,6 @@ Partial Class PersonManagement
         Me.StatusDataGridViewTextBoxColumn.Name = "StatusDataGridViewTextBoxColumn"
         Me.StatusDataGridViewTextBoxColumn.ReadOnly = True
         '
-        'PersonBindingSource
-        '
-        Me.PersonBindingSource.DataMember = "Person"
-        Me.PersonBindingSource.DataSource = Me.CmsDataSet
-        '
-        'CmsDataSet
-        '
-        Me.CmsDataSet.DataSetName = "cmsDataSet"
-        Me.CmsDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
-        '
-        'PersonTableAdapter
-        '
-        Me.PersonTableAdapter.ClearBeforeFill = True
-        '
         'PersonManagement
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -268,7 +260,7 @@ Partial Class PersonManagement
         Me.Panel1.PerformLayout()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.dgvPatients, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PersonBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PatientBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.CmsDataSet, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
@@ -284,15 +276,14 @@ Partial Class PersonManagement
     Friend WithEvents PictureBox2 As System.Windows.Forms.PictureBox
     Friend WithEvents txtSearch As System.Windows.Forms.TextBox
     Friend WithEvents Label1 As Label
-    Friend WithEvents PersonBindingSource As BindingSource
+    Friend WithEvents PatientBindingSource As BindingSource
     Friend WithEvents CmsDataSet As cmsDataSet
-    Friend WithEvents PersonTableAdapter As cmsDataSetTableAdapters.PersonTableAdapter
-    Friend WithEvents fullname As DataGridViewTextBoxColumn
-    Friend WithEvents address As DataGridViewTextBoxColumn
+    Friend WithEvents PatientTableAdapter As cmsDataSetTableAdapters.PatientTableAdapter
+    Friend WithEvents FullnameDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents GenderDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
     Friend WithEvents BirthdateDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents address As DataGridViewTextBoxColumn
     Friend WithEvents PhoneDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
-    Friend WithEvents IllnessesDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
-    Friend WithEvents TemperatureDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
     Friend WithEvents RemarksDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
     Friend WithEvents StatusDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
 End Class

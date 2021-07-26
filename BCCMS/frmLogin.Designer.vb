@@ -46,7 +46,7 @@ Partial Class frmLogin
         'PictureBox1
         '
         Me.PictureBox1.Image = Global.CMS.My.Resources.Resources.HubPages_1x1_CommunicableDiseases_a9cuob
-        Me.PictureBox1.Location = New System.Drawing.Point(19, 124)
+        Me.PictureBox1.Location = New System.Drawing.Point(25, 104)
         Me.PictureBox1.Name = "PictureBox1"
         Me.PictureBox1.Size = New System.Drawing.Size(326, 328)
         Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
@@ -127,11 +127,12 @@ Partial Class frmLogin
         '
         Me.Label3.Font = New System.Drawing.Font("Segoe UI", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label3.ForeColor = System.Drawing.Color.FromArgb(CType(CType(25, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
-        Me.Label3.Location = New System.Drawing.Point(19, 37)
+        Me.Label3.Location = New System.Drawing.Point(19, 47)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(326, 84)
+        Me.Label3.Size = New System.Drawing.Size(326, 42)
         Me.Label3.TabIndex = 1
-        Me.Label3.Text = "Barangay Covid-19 Cases Monitoring System"
+        Me.Label3.Text = "Covid Monitoring System"
+        Me.Label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'Label4
         '

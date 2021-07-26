@@ -53,6 +53,8 @@
         ChangeButtonColor(btnDashboard)
         ChangeContent(Headline1)
 
+        Headline1.DashboardRefreshData()
+
     End Sub
 
     Private Sub Logout()
@@ -95,12 +97,13 @@
     Private Sub btnDashboard_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnDashboard.Click
         ChangeButtonColor(btnDashboard)
         ChangeContent(Headline1)
+        Headline1.DashboardRefreshData()
     End Sub
 
     Private Sub btnPatients_Click(ByVal sender As Object, ByVal e As System.EventArgs) Handles btnPatients.Click
         ChangeButtonColor(btnPatients)
         ChangeContent(PersonManagement1)
-        PersonManagement1.Category = Person.CAT_CARRIER
+        PersonManagement1.Category = Patient.CAT_CARRIER
         PersonManagement1.RefreshData()
     End Sub
 
@@ -111,7 +114,7 @@
 
     Private Sub btnContactTracing_Click(sender As Object, e As EventArgs) Handles btnContactTracing.Click
         ChangeButtonColor(btnContactTracing)
-        PersonManagement1.Category = Person.CAT_CONTACT_TRACE
+        PersonManagement1.Category = Patient.CAT_CONTACT_TRACE
         ChangeContent(PersonManagement1)
         PersonManagement1.RefreshData()
     End Sub
